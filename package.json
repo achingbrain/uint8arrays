@@ -1,6 +1,6 @@
 {
   "name": "uint8arrays",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
   "main": "index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
@@ -30,5 +30,8 @@
   },
   "devDependencies": {
     "aegir": "^25.0.0"
-  }
+  },
+  "contributors": [
+    "achingbrain <alex@achingbrain.net>"
+  ]
 }
