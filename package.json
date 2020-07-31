@@ -14,7 +14,10 @@
     "index.js",
     "to-string.js"
   ],
-  "repository": "github:achingbrain/uint8arrays",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achingbrain/uint8arrays.git"
+  },
   "scripts": {
     "test": "aegir test",
     "test:browser": "aegir test -t browser",
