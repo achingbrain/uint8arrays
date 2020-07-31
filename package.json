@@ -7,8 +7,12 @@
   "homepage": "https://github.com/achingbrain/uint8arrays",
   "bugs": "https://github.com/achingbrain/uint8arrays/issues",
   "files": [
-    "lib",
-    "index.js"
+    "compare.js",
+    "concat.js",
+    "equals.js",
+    "from-string.js",
+    "index.js",
+    "to-string.js"
   ],
   "repository": "github:achingbrain/uint8arrays",
   "scripts": {
