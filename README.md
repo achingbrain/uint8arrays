@@ -93,6 +93,7 @@ const fromString = require('uint8arrays/from-string')
 console.info(fromString('hello world')) // Uint8Array[104, 101 ...
 console.info(fromString('00010203aabbcc', 'base16')) // Uint8Array[0, 1 ...
 console.info(fromString('AAECA6q7zA', 'base64')) // Uint8Array[0, 1 ...
+console.info(fromString('01234', 'ascii')) // Uint8Array[48, 49 ...
 ```
 
 ### toString(array, encoding = 'utf8')
@@ -109,4 +110,5 @@ const fromString = require('uint8arrays/from-string')
 console.info(toString(Uint8Array.from([104, 101...]))) // 'hello world'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base16')) // '00010203aabbcc'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base64')) // 'AAECA6q7zA'
+console.info(toString(Uint8Array.from([48, 49, 50...]), 'ascii')) // '01234'
 ```
