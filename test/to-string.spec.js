@@ -27,6 +27,19 @@ describe('Uint8Array toString', () => {
     expect(toString(arr, 'base64')).to.deep.equal(str)
   })
 
+  it('creates an ascii string from a Uint8Array', () => {
+    const str = [
+      String.fromCharCode(0),
+      String.fromCharCode(1),
+      String.fromCharCode(2),
+      String.fromCharCode(3),
+      String.fromCharCode(4)
+    ].join('')
+    const arr = Uint8Array.from([0, 1, 2, 3, 4])
+
+    expect(toString(arr, 'ascii')).to.deep.equal(str)
+  })
+
   it('throws when an unknown base is passed', () => {
     const arr = Uint8Array.from([0, 1, 2, 3, 170, 187, 204])
 
