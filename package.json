@@ -12,7 +12,8 @@
     "equals.js",
     "from-string.js",
     "index.js",
-    "to-string.js"
+    "to-string.js",
+    "*.d.ts"
   ],
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
     "release": "aegir release --docs",
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
-    "build": "aegir build"
+    "build": "aegir build",
+    "prepublishOnly": "rm *.d.ts && tsc -d --emitDeclarationOnly --allowJs *.js"
   },
   "license": "MIT",
   "dependencies": {
