@@ -30,7 +30,14 @@
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
     "build": "aegir build",
-    "prepublishOnly": "rm *.d.ts && tsc -d --emitDeclarationOnly --allowJs *.js"
+    "prepublishOnly": "rm -f dist/*.d.ts && tsc -d --emitDeclarationOnly --declarationDir dist --allowJs *.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
   },
   "license": "MIT",
   "dependencies": {
