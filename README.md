@@ -105,7 +105,7 @@ Supports `utf8` and any of the [multiformats encodings](https://www.npmjs.com/pa
 #### Example
 
 ```js
-const fromString = require('uint8arrays/from-string')
+const toString = require('uint8arrays/to-string')
 
 console.info(toString(Uint8Array.from([104, 101...]))) // 'hello world'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base16')) // '00010203aabbcc'
