@@ -4,7 +4,7 @@
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
  *
  * @param {Array<ArrayLike<number>>} arrays
- * @param {Number} length
+ * @param {Number} [length]
  * @returns {Uint8Array}
  */
 function concat (arrays, length) {

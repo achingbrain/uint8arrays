@@ -8,7 +8,7 @@ const { TextEncoder } = require('web-encoding')
 describe('Uint8Array fromString', () => {
   it('creates a Uint8Array from a string', () => {
     const str = 'hello world'
-    const arr = new TextEncoder('utf8').encode(str)
+    const arr = new TextEncoder().encode(str)
 
     expect(fromString(str)).to.deep.equal(arr)
   })
