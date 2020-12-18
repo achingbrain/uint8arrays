@@ -1,3 +1,12 @@
+## [2.0.5](https://github.com/achingbrain/uint8arrays/compare/v2.0.4...v2.0.5) (2020-12-18)
+
+
+### Bug Fixes
+
+* fixes prepare script and tsconfig extends field ([#10](https://github.com/achingbrain/uint8arrays/issues/10)) ([48c3099](https://github.com/achingbrain/uint8arrays/commit/48c3099ec0f0ee32b58a789754534933a2ae05ce)), closes [#11](https://github.com/achingbrain/uint8arrays/issues/11)
+
+
+
 ## [2.0.4](https://github.com/achingbrain/uint8arrays/compare/v2.0.3...v2.0.4) (2020-12-18)
 
 
