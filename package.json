@@ -6,12 +6,12 @@
   "author": "Alex Potsides <alex@achingbrain.net>",
   "homepage": "https://github.com/achingbrain/uint8arrays",
   "bugs": "https://github.com/achingbrain/uint8arrays/issues",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "src/*": [
-        "dist/src/*",
-        "dist/src/*/index"
+      "*": [
+        "dist/*",
+        "dist/*/index"
       ]
     }
   },
@@ -24,14 +24,15 @@
     "to-string.js",
     "dist/*.ts",
     "dist/*.map",
-    "dist/*.js"
+    "dist/*.js",
+    "tsconfig.json"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/achingbrain/uint8arrays.git"
   },
   "scripts": {
-    "prepare": "aegir ts -p check",
+    "prepare": "aegir ts -p types",
     "test": "aegir test",
     "lint": "aegir lint",
     "release": "aegir release --docs",
@@ -51,6 +52,7 @@
   "contributors": [
     "achingbrain <alex@achingbrain.net>",
     "Cayman <caymannava@gmail.com>",
-    "Rafael Ramalho <rafazelramalho19@gmail.com>"
+    "Rafael Ramalho <rafazelramalho19@gmail.com>",
+    "Irakli Gozalishvili <dev@gozala.io>"
   ]
 }
