@@ -15,6 +15,17 @@
       ]
     }
   },
+  "files": [
+    "compare.js",
+    "concat.js",
+    "equals.js",
+    "from-string.js",
+    "index.js",
+    "to-string.js",
+    "dist/*.ts",
+    "dist/*.map",
+    "dist/*.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/achingbrain/uint8arrays.git"
@@ -26,7 +37,8 @@
     "release": "aegir release --docs",
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
-    "build": "aegir build && aegir ts"
+    "build": "aegir build && aegir ts",
+    "prepublishOnly": "npm run build"
   },
   "license": "MIT",
   "dependencies": {
