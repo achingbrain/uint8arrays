@@ -31,7 +31,7 @@
     "url": "https://github.com/achingbrain/uint8arrays.git"
   },
   "scripts": {
-    "prepare": "aegir ts -p check",
+    "prepare": "aegir ts -p types",
     "test": "aegir test",
     "lint": "aegir lint",
     "release": "aegir release --docs",
