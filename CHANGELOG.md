@@ -1,3 +1,12 @@
+## [2.0.4](https://github.com/achingbrain/uint8arrays/compare/v2.0.3...v2.0.4) (2020-12-18)
+
+
+### Bug Fixes
+
+* fixes type mapping ([#9](https://github.com/achingbrain/uint8arrays/issues/9)) ([34747cb](https://github.com/achingbrain/uint8arrays/commit/34747cb45a76425f6158d24c1e57b2504d9c5991))
+
+
+
 ## [2.0.3](https://github.com/achingbrain/uint8arrays/compare/v2.0.2...v2.0.3) (2020-12-18)
 
 
