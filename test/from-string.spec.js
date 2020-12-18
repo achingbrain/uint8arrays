@@ -43,6 +43,7 @@ describe('Uint8Array fromString', () => {
   it('throws when an unknown base is passed', () => {
     const str = 'hello world'
 
-    expect(() => fromString(str, 'derp')).to.throw(/Unknown base/)
+    // @ts-expect-error 'derp' is not a valid encoding
+    expect(() => fromString(str, 'derp')).to.throw(/Unsupported encoding/)
   })
 })

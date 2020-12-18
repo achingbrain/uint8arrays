@@ -1,15 +1,19 @@
 'use strict'
 
-const { names } = require('multibase/src/constants')
+const { encoding: getCodec } = require('multibase')
 const { TextDecoder } = require('web-encoding')
 const utf8Decoder = new TextDecoder('utf8')
+
+/**
+ * @typedef {import('multibase/src/types').BaseName} BaseName
+ */
 
 /**
  * Turns a Uint8Array of bytes into a string with each
  * character being the char code of the corresponding byte
  *
- * @param {Uint8Array} array The array to turn into a string
- * @returns {String}
+ * @param {Uint8Array} array - The array to turn into a string
+ * @returns {string}
  */
 function uint8ArrayToAsciiString (array) {
   let string = ''
@@ -27,10 +31,9 @@ function uint8ArrayToAsciiString (array) {
  *
  * Also `ascii` which is similar to node's 'binary' encoding.
  *
- * @param {Uint8Array} array The array to turn into a string
- * @param {String} [encoding=utf8] The encoding to use
- * @returns {String}
- * @see {@link https://www.npmjs.com/package/multibase|multibase} for supported encodings other than `utf8`
+ * @param {Uint8Array} array - The array to turn into a string
+ * @param {BaseName | 'utf8' | 'utf-8' | 'ascii'} [encoding=utf8] - The encoding to use
+ * @returns {string}
  */
 function toString (array, encoding = 'utf8') {
   if (encoding === 'utf8' || encoding === 'utf-8') {
@@ -41,13 +44,7 @@ function toString (array, encoding = 'utf8') {
     return uint8ArrayToAsciiString(array)
   }
 
-  const codec = names[encoding]
-
-  if (!codec) {
-    throw new Error('Unknown base')
-  }
-
-  return codec.encode(array)
+  return getCodec(encoding).encode(array)
 }
 
 module.exports = toString

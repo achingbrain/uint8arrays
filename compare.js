@@ -5,7 +5,7 @@
  *
  * @param {Uint8Array} a
  * @param {Uint8Array} b
- * @returns {Number}
+ * @returns {number}
  */
 function compare (a, b) {
   for (let i = 0; i < a.byteLength; i++) {

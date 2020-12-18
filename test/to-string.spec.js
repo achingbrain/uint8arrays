@@ -1,6 +1,8 @@
 'use strict'
 
 /* eslint-env mocha */
+
+// @ts-ignore
 const { expect } = require('aegir/utils/chai')
 const toString = require('../to-string')
 const { TextEncoder } = require('web-encoding')
@@ -43,6 +45,7 @@ describe('Uint8Array toString', () => {
   it('throws when an unknown base is passed', () => {
     const arr = Uint8Array.from([0, 1, 2, 3, 170, 187, 204])
 
-    expect(() => toString(arr, 'derp')).to.throw(/Unknown base/)
+    // @ts-expect-error 'derp' is not a valid encoding
+    expect(() => toString(arr, 'derp')).to.throw(/Unsupported encoding/)
   })
 })
