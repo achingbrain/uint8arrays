@@ -24,7 +24,8 @@
     "to-string.js",
     "dist/*.ts",
     "dist/*.map",
-    "dist/*.js"
+    "dist/*.js",
+    "tsconfig.json"
   ],
   "repository": {
     "type": "git",
