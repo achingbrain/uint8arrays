@@ -34,7 +34,8 @@
     "release": "aegir release --docs",
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
-    "build": "aegir build && aegir ts"
+    "build": "aegir build && aegir ts",
+    "prepublishOnly": "npm run build"
   },
   "license": "MIT",
   "dependencies": {
