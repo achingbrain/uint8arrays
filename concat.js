@@ -5,7 +5,6 @@
  *
  * @param {Array<ArrayLike<number>>} arrays
  * @param {number} [length]
- * @returns {Uint8Array}
  */
 function concat (arrays, length) {
   if (!length) {

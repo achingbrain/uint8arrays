@@ -13,7 +13,6 @@ const utf8Decoder = new TextDecoder('utf8')
  * character being the char code of the corresponding byte
  *
  * @param {Uint8Array} array - The array to turn into a string
- * @returns {string}
  */
 function uint8ArrayToAsciiString (array) {
   let string = ''

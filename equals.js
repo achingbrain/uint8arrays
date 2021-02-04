@@ -5,7 +5,6 @@
  *
  * @param {Uint8Array} a
  * @param {Uint8Array} b
- * @returns {boolean}
  */
 function equals (a, b) {
   if (a === b) {

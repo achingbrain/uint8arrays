@@ -5,7 +5,6 @@
  *
  * @param {Uint8Array} a
  * @param {Uint8Array} b
- * @returns {Uint8Array}
  */
 function xor (a, b) {
   if (a.length !== b.length) {

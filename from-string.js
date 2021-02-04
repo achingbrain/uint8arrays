@@ -13,7 +13,6 @@ const utf8Encoder = new TextEncoder()
  * returns a Uint8Array of those bytes.
  *
  * @param {string} string - The string to turn into an array
- * @returns {Uint8Array}
  */
 function asciiStringToUint8Array (string) {
   const array = new Uint8Array(string.length)
