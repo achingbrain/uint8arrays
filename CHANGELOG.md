@@ -1,3 +1,13 @@
+## [2.1.2](https://github.com/achingbrain/uint8arrays/compare/v2.1.1...v2.1.2) (2021-02-04)
+
+
+### Bug Fixes
+
+* typedef exports ([c24790e](https://github.com/achingbrain/uint8arrays/commit/c24790ef52f665f85bacedf99420c47059c423c7))
+* typedef exports ([91b7db3](https://github.com/achingbrain/uint8arrays/commit/91b7db3a20313df5b291c0c3182a2c8bdeccab68))
+
+
+
 ## [2.1.1](https://github.com/achingbrain/uint8arrays/compare/v2.1.0...v2.1.1) (2021-02-04)
 
 
