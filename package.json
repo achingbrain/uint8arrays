@@ -10,8 +10,10 @@
   "typesVersions": {
     "*": {
       "*": [
-        "dist/*",
-        "dist/*/index"
+        "dist/*"
+      ],
+      "index.js": [
+        "dist/index.d.ts"
       ]
     }
   },
