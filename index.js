@@ -5,5 +5,6 @@ module.exports = {
   concat: require('./concat'),
   equals: require('./equals'),
   fromString: require('./from-string'),
-  toString: require('./to-string')
+  toString: require('./to-string'),
+  xor: require('./xor')
 }
