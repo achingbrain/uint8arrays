@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/achingbrain/uint8arrays/compare/v2.0.5...v2.1.0) (2021-02-04)
+
+
+### Features
+
+* add xor function ([82e4129](https://github.com/achingbrain/uint8arrays/commit/82e41296034e4890f4c7cf4dbd7a24693d03cb7f))
+
+
+
 ## [2.0.5](https://github.com/achingbrain/uint8arrays/compare/v2.0.4...v2.0.5) (2020-12-18)
 
 
