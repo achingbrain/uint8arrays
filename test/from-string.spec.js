@@ -1,6 +1,6 @@
+/* eslint-env mocha */
 'use strict'
 
-/* eslint-env mocha */
 const { expect } = require('aegir/utils/chai')
 const fromString = require('../from-string')
 const { TextEncoder } = require('web-encoding')

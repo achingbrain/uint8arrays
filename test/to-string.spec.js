@@ -1,8 +1,6 @@
+/* eslint-env mocha */
 'use strict'
 
-/* eslint-env mocha */
-
-// @ts-ignore
 const { expect } = require('aegir/utils/chai')
 const toString = require('../to-string')
 const { TextEncoder } = require('web-encoding')

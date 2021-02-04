@@ -13,6 +13,8 @@ Some utility functions to make dealing with `Uint8Array`s more pleasant.
     - [Example](#example-3)
   - [toString(array, encoding = 'utf8')](#tostringarray-encoding--utf8)
     - [Example](#example-4)
+  - [xor(a, b)](#xora-b)
+    - [Example](#example-5)
 
 ## API
 
@@ -111,4 +113,16 @@ console.info(toString(Uint8Array.from([104, 101...]))) // 'hello world'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base16')) // '00010203aabbcc'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base64')) // 'AAECA6q7zA'
 console.info(toString(Uint8Array.from([48, 49, 50...]), 'ascii')) // '01234'
+```
+
+### xor(a, b)
+
+Returns a `Uint8Array` containing `a` and `b` xored together.
+
+#### Example
+
+```js
+const xor = require('uint8arrays/xor')
+
+console.info(xor(Uint8Array.from([1, 0]), Uint8Array.from([0, 1]))) // Uint8Array[1, 1]
 ```
