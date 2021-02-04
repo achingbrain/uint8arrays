@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<meta name="description" content="Documentation for ">
+	<title>uint8arrays - v2.1.0</title>
+	<meta name="description" content="Documentation for uint8arrays - v2.1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
@@ -132,7 +132,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title"></a>
+					<a href="index.html" class="title">uint8arrays - v2.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<a href="#" class="toolbar-icon toolbar-icon-menu" data-toggle="menu"><i class="gg-menu"></i></a>
@@ -144,7 +144,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 			</ul>
-			<h1></h1>
+			<h1>uint8arrays - v2.1.0</h1>
 		</div>
 	</div>
 </header>
@@ -152,11 +152,168 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<a href="#uint8arrays-" id="uint8arrays-" style="color: inherit; text-decoration: none;">
+					<h1>Uint8Arrays <!-- omit in toc --></h1>
+				</a>
+				<p>Some utility functions to make dealing with <code>Uint8Array</code>s more pleasant.</p>
+				<ul>
+					<li><a href="#api">API</a><ul>
+							<li><a href="#comparea-b">compare(a, b)</a><ul>
+									<li><a href="#example">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#concatarrays-length">concat(arrays, [length])</a><ul>
+									<li><a href="#example-1">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#equalsa-b">equals(a, b)</a><ul>
+									<li><a href="#example-2">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#fromstringstring-encoding--utf8">fromString(string, encoding = &#39;utf8&#39;)</a><ul>
+									<li><a href="#example-3">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#tostringarray-encoding--utf8">toString(array, encoding = &#39;utf8&#39;)</a><ul>
+									<li><a href="#example-4">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#xora-b">xor(a, b)</a><ul>
+									<li><a href="#example-5">Example</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h2>API</h2>
+				</a>
+				<a href="#comparea-b" id="comparea-b" style="color: inherit; text-decoration: none;">
+					<h3>compare(a, b)</h3>
+				</a>
+				<p>Compare two <code>Uint8Arrays</code></p>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> compare = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/compare&#x27;</span>)
+
+<span class="hljs-keyword">const</span> arrays = [
+  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]),
+  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+]
+
+<span class="hljs-keyword">const</span> sorted = arrays.sort(compare)
+
+<span class="hljs-built_in">console</span>.info(sorted)
+<span class="hljs-comment">// [</span>
+<span class="hljs-comment">//    Uint8Array[0, 1, 2]</span>
+<span class="hljs-comment">//    Uint8Array[3, 4, 5]</span>
+<span class="hljs-comment">// ]</span>
+</code></pre>
+				<a href="#concatarrays-length" id="concatarrays-length" style="color: inherit; text-decoration: none;">
+					<h3>concat(arrays, [length])</h3>
+				</a>
+				<p>Concatenate one or more array-likes and return a <code>Uint8Array</code> with their contents.</p>
+				<p>If you know the length of the arrays, pass it as a second parameter, otherwise it will be calculated by traversing the list of arrays.</p>
+				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> concat = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/concat&#x27;</span>)
+
+<span class="hljs-keyword">const</span> arrays = [
+  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]),
+  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+]
+
+<span class="hljs-keyword">const</span> all = concat(arrays, <span class="hljs-number">6</span>)
+
+<span class="hljs-built_in">console</span>.info(all)
+<span class="hljs-comment">// Uint8Array[0, 1, 2, 3, 4, 5]</span>
+</code></pre>
+				<a href="#equalsa-b" id="equalsa-b" style="color: inherit; text-decoration: none;">
+					<h3>equals(a, b)</h3>
+				</a>
+				<p>Returns true if the two arrays are the same array or if they have the same length and contents.</p>
+				<a href="#example-2" id="example-2" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> equals = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/equals&#x27;</span>)
+
+<span class="hljs-keyword">const</span> a = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+<span class="hljs-keyword">const</span> b = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+<span class="hljs-keyword">const</span> c = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+
+<span class="hljs-built_in">console</span>.info(equals(a, b)) <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">console</span>.info(equals(a, c)) <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.info(equals(a, a)) <span class="hljs-comment">// true</span>
+</code></pre>
+				<a href="#fromstringstring-encoding--39utf839" id="fromstringstring-encoding--39utf839" style="color: inherit; text-decoration: none;">
+					<h3>fromString(string, encoding = &#39;utf8&#39;)</h3>
+				</a>
+				<p>Returns a new <code>Uint8Array</code> created from the passed string and interpreted as the passed encoding.</p>
+				<p>Supports <code>utf8</code> and any of the <a href="https://www.npmjs.com/package/multibase#supported-encodings-see-srcconstantsjs">multiformats encodings</a>.</p>
+				<a href="#example-3" id="example-3" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> fromString = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/from-string&#x27;</span>)
+
+<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;hello world&#x27;</span>)) <span class="hljs-comment">// Uint8Array[104, 101 ...</span>
+<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;00010203aabbcc&#x27;</span>, <span class="hljs-string">&#x27;base16&#x27;</span>)) <span class="hljs-comment">// Uint8Array[0, 1 ...</span>
+<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;AAECA6q7zA&#x27;</span>, <span class="hljs-string">&#x27;base64&#x27;</span>)) <span class="hljs-comment">// Uint8Array[0, 1 ...</span>
+<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;01234&#x27;</span>, <span class="hljs-string">&#x27;ascii&#x27;</span>)) <span class="hljs-comment">// Uint8Array[48, 49 ...</span>
+</code></pre>
+				<a href="#tostringarray-encoding--39utf839" id="tostringarray-encoding--39utf839" style="color: inherit; text-decoration: none;">
+					<h3>toString(array, encoding = &#39;utf8&#39;)</h3>
+				</a>
+				<p>Returns a string created from the passed <code>Uint8Array</code> in the passed encoding.</p>
+				<p>Supports <code>utf8</code> and any of the <a href="https://www.npmjs.com/package/multibase#supported-encodings-see-srcconstantsjs">multiformats encodings</a>.</p>
+				<a href="#example-4" id="example-4" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> toString = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/to-string&#x27;</span>)
+
+<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">104</span>, <span class="hljs-number">101.</span>..]))) <span class="hljs-comment">// &#x27;hello world&#x27;</span>
+<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2.</span>..]), <span class="hljs-string">&#x27;base16&#x27;</span>)) <span class="hljs-comment">// &#x27;00010203aabbcc&#x27;</span>
+<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2.</span>..]), <span class="hljs-string">&#x27;base64&#x27;</span>)) <span class="hljs-comment">// &#x27;AAECA6q7zA&#x27;</span>
+<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">48</span>, <span class="hljs-number">49</span>, <span class="hljs-number">50.</span>..]), <span class="hljs-string">&#x27;ascii&#x27;</span>)) <span class="hljs-comment">// &#x27;01234&#x27;</span>
+</code></pre>
+				<a href="#xora-b" id="xora-b" style="color: inherit; text-decoration: none;">
+					<h3>xor(a, b)</h3>
+				</a>
+				<p>Returns a <code>Uint8Array</code> containing <code>a</code> and <code>b</code> xored together.</p>
+				<a href="#example-5" id="example-5" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> xor = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/xor&#x27;</span>)
+
+<span class="hljs-built_in">console</span>.info(xor(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]), <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]))) <span class="hljs-comment">// Uint8Array[1, 1]</span>
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_compare_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/compare</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_concat_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/concat</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_equals_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/equals</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_from_string_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/from-string</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_index_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_to_string_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/to-string</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_xor_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/xor</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -170,6 +327,12 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
