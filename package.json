@@ -34,22 +34,27 @@
     "url": "https://github.com/achingbrain/uint8arrays.git"
   },
   "scripts": {
-    "prepare": "aegir ts",
+    "prepare": "aegir build --no-bundle",
     "test": "aegir test",
     "lint": "aegir lint",
-    "release": "aegir release --docs",
-    "release-minor": "aegir release --type minor --docs",
-    "release-major": "aegir release --type major --docs",
-    "build": "aegir build && aegir ts",
-    "prepublishOnly": "npm run build"
+    "release": "aegir release",
+    "release-minor": "aegir release --type minor",
+    "release-major": "aegir release --type major",
+    "build": "aegir build"
   },
   "license": "MIT",
   "dependencies": {
-    "multibase": "^3.0.0",
-    "web-encoding": "^1.0.5"
+    "multibase": "^4.0.1",
+    "web-encoding": "^1.1.0"
   },
   "devDependencies": {
-    "aegir": "^30.3.0"
+    "aegir": "^31.0.0"
+  },
+  "eslintConfig": {
+    "extends": "ipfs",
+    "ignorePatterns": [
+      "!.aegir.js"
+    ]
   },
   "contributors": [
     "achingbrain <alex@achingbrain.net>",
