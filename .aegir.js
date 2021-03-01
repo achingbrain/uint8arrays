@@ -1,7 +1,13 @@
 'use strict'
 
+/** @type {import('aegir').PartialOptions} */
 module.exports = {
-  webpack: {
-    entry: './index.js'
+  build: {
+    config: {
+      entryPoints: ['index.js']
+    }
+  },
+  docs: {
+    entryPoint: 'index.js'
   }
 }
