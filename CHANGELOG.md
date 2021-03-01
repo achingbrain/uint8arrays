@@ -1,3 +1,12 @@
+## [2.1.3](https://github.com/achingbrain/uint8arrays/compare/v2.1.2...v2.1.3) (2021-03-01)
+
+
+### Bug Fixes
+
+* upgrade aegir and multibase ([#14](https://github.com/achingbrain/uint8arrays/issues/14)) ([875fb95](https://github.com/achingbrain/uint8arrays/commit/875fb95d259adf02ff3a05912a04e74a45b93911))
+
+
+
 ## [2.1.2](https://github.com/achingbrain/uint8arrays/compare/v2.1.1...v2.1.2) (2021-02-04)
 
 
