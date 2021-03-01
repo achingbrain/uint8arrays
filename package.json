@@ -1,6 +1,6 @@
 {
   "name": "uint8arrays",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
   "main": "index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
@@ -60,6 +60,7 @@
     "achingbrain <alex@achingbrain.net>",
     "Cayman <caymannava@gmail.com>",
     "Irakli Gozalishvili <contact@gozala.io>",
+    "Hugo Dias <hugomrdias@gmail.com>",
     "Rafael Ramalho <rafazelramalho19@gmail.com>"
   ]
 }
