@@ -3,120 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>uint8arrays - v2.1.2</title>
-	<meta name="description" content="Documentation for uint8arrays - v2.1.2">
+	<title>uint8arrays - v2.1.3</title>
+	<meta name="description" content="Documentation for uint8arrays - v2.1.3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
-	<style>
-        .toolbar-icon {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .toolbar-icon-search {
-            box-sizing: border-box;
-            position: absolute;
-            overflow: hidden;
-            right: -40px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @media (min-width: 901px){
-                display: none
-            }
-        }
-            @media (min-width: 901px){
-                .toolbar-icon-menu {
-                    display: none
-                }
-                .toolbar-icon-options {
-                    display: none
-                }
-            }
-
-        .gg-menu {
-            transform: scale(var(--ggs,1))
-        }
-        .gg-menu,
-        .gg-menu::after,
-        .gg-menu::before {
-            box-sizing: border-box;
-            position: relative;
-            display: block;
-            width: 20px;
-            height: 2px;
-            border-radius: 3px;
-            background: currentColor
-        }
-        .gg-menu::after,
-        .gg-menu::before {
-            content: "";
-            position: absolute;
-            top: -6px
-        }
-        .gg-menu::after {
-            top: 6px
-        }
-        .gg-options {
-            box-sizing: border-box;
-            position: relative;
-            display: block;
-            transform: scale(var(--ggs,1));
-            width: 10px;
-            height: 2px;
-            box-shadow:
-                -3px 4px 0 0,
-                3px -4px 0 0
-        }
-        .gg-options::after,
-        .gg-options::before {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            border: 2px solid;
-            border-radius: 100%
-        }
-        .gg-options::before {
-            top: -7px;
-            left: -4px
-        }
-        .gg-options::after {
-            bottom: -7px;
-            right: -4px
-        }
-        .gg-search {
-            box-sizing: border-box;
-            position: relative;
-            display: block;
-            transform: scale(var(--ggs,1));
-            width: 16px;
-            height: 16px;
-            border: 2px solid;
-            border-radius: 100%;
-            margin-left: -4px;
-            margin-top: -4px
-        }
-        .gg-search::after {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            position: absolute;
-            border-radius: 3px;
-            width: 2px;
-            height: 8px;
-            background: currentColor;
-            transform: rotate(-45deg);
-            top: 10px;
-            left: 12px
-        }
-    </style>
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -125,26 +16,41 @@
 			<div class="table-wrap">
 				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
-						<label for="tsd-search-field" class="toolbar-icon toolbar-icon-search"><i class="gg-search"></i></label>
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
 					</div>
 					<ul class="results">
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">uint8arrays - v2.1.2</a>
+					<a href="index.html" class="title">uint8arrays - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
-					<a href="#" class="toolbar-icon toolbar-icon-menu" data-toggle="menu"><i class="gg-menu"></i></a>
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-			</ul>
-			<h1>uint8arrays - v2.1.2</h1>
+			<h1>uint8arrays - v2.1.3</h1>
 		</div>
 	</div>
 </header>
@@ -195,20 +101,20 @@
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> compare = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/compare&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">compare</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/compare&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-keyword">const</span> arrays = [
-  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]),
-  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
-]
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">arrays</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">]),</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">])</span>
+<span style="color: #000000">]</span>
 
-<span class="hljs-keyword">const</span> sorted = arrays.sort(compare)
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sorted</span><span style="color: #000000"> = </span><span style="color: #001080">arrays</span><span style="color: #000000">.</span><span style="color: #795E26">sort</span><span style="color: #000000">(</span><span style="color: #001080">compare</span><span style="color: #000000">)</span>
 
-<span class="hljs-built_in">console</span>.info(sorted)
-<span class="hljs-comment">// [</span>
-<span class="hljs-comment">//    Uint8Array[0, 1, 2]</span>
-<span class="hljs-comment">//    Uint8Array[3, 4, 5]</span>
-<span class="hljs-comment">// ]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #001080">sorted</span><span style="color: #000000">)</span>
+<span style="color: #008000">// [</span>
+<span style="color: #008000">//    Uint8Array[0, 1, 2]</span>
+<span style="color: #008000">//    Uint8Array[3, 4, 5]</span>
+<span style="color: #008000">// ]</span>
 </code></pre>
 				<a href="#concatarrays-length" id="concatarrays-length" style="color: inherit; text-decoration: none;">
 					<h3>concat(arrays, [length])</h3>
@@ -218,17 +124,17 @@
 				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> concat = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/concat&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">concat</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/concat&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-keyword">const</span> arrays = [
-  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]),
-  <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
-]
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">arrays</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]),</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">])</span>
+<span style="color: #000000">]</span>
 
-<span class="hljs-keyword">const</span> all = concat(arrays, <span class="hljs-number">6</span>)
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">all</span><span style="color: #000000"> = </span><span style="color: #795E26">concat</span><span style="color: #000000">(</span><span style="color: #001080">arrays</span><span style="color: #000000">, </span><span style="color: #098658">6</span><span style="color: #000000">)</span>
 
-<span class="hljs-built_in">console</span>.info(all)
-<span class="hljs-comment">// Uint8Array[0, 1, 2, 3, 4, 5]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #001080">all</span><span style="color: #000000">)</span>
+<span style="color: #008000">// Uint8Array[0, 1, 2, 3, 4, 5]</span>
 </code></pre>
 				<a href="#equalsa-b" id="equalsa-b" style="color: inherit; text-decoration: none;">
 					<h3>equals(a, b)</h3>
@@ -237,15 +143,15 @@
 				<a href="#example-2" id="example-2" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> equals = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/equals&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">equals</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/equals&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-keyword">const</span> a = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
-<span class="hljs-keyword">const</span> b = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
-<span class="hljs-keyword">const</span> c = <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">a</span><span style="color: #000000"> = </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">])</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">b</span><span style="color: #000000"> = </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">])</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">c</span><span style="color: #000000"> = </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">])</span>
 
-<span class="hljs-built_in">console</span>.info(equals(a, b)) <span class="hljs-comment">// false</span>
-<span class="hljs-built_in">console</span>.info(equals(a, c)) <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.info(equals(a, a)) <span class="hljs-comment">// true</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">equals</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">, </span><span style="color: #001080">b</span><span style="color: #000000">)) </span><span style="color: #008000">// false</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">equals</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">, </span><span style="color: #001080">c</span><span style="color: #000000">)) </span><span style="color: #008000">// true</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">equals</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">, </span><span style="color: #001080">a</span><span style="color: #000000">)) </span><span style="color: #008000">// true</span>
 </code></pre>
 				<a href="#fromstringstring-encoding--39utf839" id="fromstringstring-encoding--39utf839" style="color: inherit; text-decoration: none;">
 					<h3>fromString(string, encoding = &#39;utf8&#39;)</h3>
@@ -255,12 +161,12 @@
 				<a href="#example-3" id="example-3" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> fromString = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/from-string&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">fromString</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/from-string&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;hello world&#x27;</span>)) <span class="hljs-comment">// Uint8Array[104, 101 ...</span>
-<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;00010203aabbcc&#x27;</span>, <span class="hljs-string">&#x27;base16&#x27;</span>)) <span class="hljs-comment">// Uint8Array[0, 1 ...</span>
-<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;AAECA6q7zA&#x27;</span>, <span class="hljs-string">&#x27;base64&#x27;</span>)) <span class="hljs-comment">// Uint8Array[0, 1 ...</span>
-<span class="hljs-built_in">console</span>.info(fromString(<span class="hljs-string">&#x27;01234&#x27;</span>, <span class="hljs-string">&#x27;ascii&#x27;</span>)) <span class="hljs-comment">// Uint8Array[48, 49 ...</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;hello world&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[104, 101 ...</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;00010203aabbcc&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;base16&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[0, 1 ...</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;AAECA6q7zA&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;base64&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[0, 1 ...</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;01234&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;ascii&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[48, 49 ...</span>
 </code></pre>
 				<a href="#tostringarray-encoding--39utf839" id="tostringarray-encoding--39utf839" style="color: inherit; text-decoration: none;">
 					<h3>toString(array, encoding = &#39;utf8&#39;)</h3>
@@ -270,12 +176,12 @@
 				<a href="#example-4" id="example-4" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> toString = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/to-string&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">toString</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/to-string&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">104</span>, <span class="hljs-number">101.</span>..]))) <span class="hljs-comment">// &#x27;hello world&#x27;</span>
-<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2.</span>..]), <span class="hljs-string">&#x27;base16&#x27;</span>)) <span class="hljs-comment">// &#x27;00010203aabbcc&#x27;</span>
-<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2.</span>..]), <span class="hljs-string">&#x27;base64&#x27;</span>)) <span class="hljs-comment">// &#x27;AAECA6q7zA&#x27;</span>
-<span class="hljs-built_in">console</span>.info(toString(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">48</span>, <span class="hljs-number">49</span>, <span class="hljs-number">50.</span>..]), <span class="hljs-string">&#x27;ascii&#x27;</span>)) <span class="hljs-comment">// &#x27;01234&#x27;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">104</span><span style="color: #000000">, </span><span style="color: #098658">101.</span><span style="color: #000000">..]))) </span><span style="color: #008000">// &#039;hello world&#039;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2.</span><span style="color: #000000">..]), </span><span style="color: #A31515">&#039;base16&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// &#039;00010203aabbcc&#039;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2.</span><span style="color: #000000">..]), </span><span style="color: #A31515">&#039;base64&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// &#039;AAECA6q7zA&#039;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">48</span><span style="color: #000000">, </span><span style="color: #098658">49</span><span style="color: #000000">, </span><span style="color: #098658">50.</span><span style="color: #000000">..]), </span><span style="color: #A31515">&#039;ascii&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// &#039;01234&#039;</span>
 </code></pre>
 				<a href="#xora-b" id="xora-b" style="color: inherit; text-decoration: none;">
 					<h3>xor(a, b)</h3>
@@ -284,40 +190,40 @@
 				<a href="#example-5" id="example-5" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> xor = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;uint8arrays/xor&#x27;</span>)
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">xor</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/xor&#039;</span><span style="color: #000000">)</span>
 
-<span class="hljs-built_in">console</span>.info(xor(<span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]), <span class="hljs-built_in">Uint8Array</span>.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]))) <span class="hljs-comment">// Uint8Array[1, 1]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">xor</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">]), </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">]))) </span><span style="color: #008000">// Uint8Array[1, 1]</span>
 </code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_compare_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/compare</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_concat_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/concat</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_equals_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/equals</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_from_string_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/from-string</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_index_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/index</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_to_string_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/to-string</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/__users_alex_documents_workspaces_achingbrain_uint8arrays_xor_.html">/Users/alex/Documents/Workspaces/achingbrain/uint8arrays/xor</a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function">
+						<a href="modules.html#compare" class="tsd-kind-icon">compare</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#concat" class="tsd-kind-icon">concat</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#equals" class="tsd-kind-icon">equals</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#fromstring" class="tsd-kind-icon">from<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#xor" class="tsd-kind-icon">xor</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -327,12 +233,6 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-			</ul>
 		</div>
 	</div>
 </footer>
