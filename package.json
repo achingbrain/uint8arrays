@@ -44,8 +44,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "multibase": "^4.0.1",
-    "web-encoding": "^1.1.0"
+    "multibase": "^4.0.1"
   },
   "devDependencies": {
     "aegir": "^31.0.0"
