@@ -1,7 +1,6 @@
 'use strict'
 
 const { encoding: getCodec } = require('multibase')
-const { TextDecoder } = require('web-encoding')
 const utf8Decoder = new TextDecoder('utf8')
 
 /**

@@ -3,7 +3,6 @@
 
 const { expect } = require('aegir/utils/chai')
 const toString = require('../to-string')
-const { TextEncoder } = require('web-encoding')
 
 describe('Uint8Array toString', () => {
   it('creates a String from a Uint8Array', () => {
