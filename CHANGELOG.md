@@ -1,3 +1,7 @@
+## [2.1.4](https://github.com/achingbrain/uint8arrays/compare/v2.1.3...v2.1.4) (2021-04-06)
+
+
+
 ## [2.1.3](https://github.com/achingbrain/uint8arrays/compare/v2.1.2...v2.1.3) (2021-03-01)
 
 
