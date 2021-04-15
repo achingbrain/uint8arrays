@@ -4,7 +4,7 @@ const { encoding: getCodec } = require('multibase')
 const utf8Encoder = new TextEncoder()
 
 /**
- * @typedef {import('multibase/src/types').BaseName} BaseName
+ * @typedef {import('multibase/src/types').BaseName | 'utf8' | 'utf-8' | 'ascii' | undefined} SupportedEncodings
  */
 
 /**
@@ -31,7 +31,7 @@ function asciiStringToUint8Array (string) {
  * Also `ascii` which is similar to node's 'binary' encoding.
  *
  * @param {string} string
- * @param {BaseName | 'utf8' | 'utf-8' | 'ascii'} [encoding=utf8] - utf8, base16, base64, base64urlpad, etc
+ * @param {SupportedEncodings} [encoding=utf8] - utf8, base16, base64, base64urlpad, etc
  * @returns {Uint8Array}
  */
 function fromString (string, encoding = 'utf8') {
