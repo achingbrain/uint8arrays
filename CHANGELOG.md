@@ -1,3 +1,12 @@
+## [2.1.5](https://github.com/achingbrain/uint8arrays/compare/v2.1.4...v2.1.5) (2021-04-15)
+
+
+### Features
+
+* export supported string encodings ([#18](https://github.com/achingbrain/uint8arrays/issues/18)) ([4b971ec](https://github.com/achingbrain/uint8arrays/commit/4b971ecd987b75fc90745866eebe4466e4c61a35))
+
+
+
 ## [2.1.4](https://github.com/achingbrain/uint8arrays/compare/v2.1.3...v2.1.4) (2021-04-06)
 
 
