@@ -27,7 +27,8 @@
     "xor.js",
     "dist/*.ts",
     "dist/*.map",
-    "dist/*.js"
+    "dist/*.js",
+    "util/*.js"
   ],
   "repository": {
     "type": "git",
@@ -36,7 +37,7 @@
   "scripts": {
     "prepare": "aegir build --no-bundle",
     "test": "aegir test",
-    "lint": "aegir lint",
+    "lint": "aegir ts -p check && aegir lint",
     "release": "aegir release",
     "release-minor": "aegir release --type minor",
     "release-major": "aegir release --type major",
@@ -44,10 +45,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "multibase": "^4.0.1"
+    "multiformats": "^9.3.0"
   },
   "devDependencies": {
-    "aegir": "^33.1.0"
+    "aegir": "^34.0.2",
+    "util": "^0.12.4"
   },
   "eslintConfig": {
     "extends": "ipfs",

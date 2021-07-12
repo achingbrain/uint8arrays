@@ -85,7 +85,7 @@ console.info(equals(a, a)) // true
 
 Returns a new `Uint8Array` created from the passed string and interpreted as the passed encoding.
 
-Supports `utf8` and any of the [multiformats encodings](https://www.npmjs.com/package/multibase#supported-encodings-see-srcconstantsjs).
+Supports `utf8` and any of the [multibase encodings](https://github.com/multiformats/multibase/blob/master/multibase.csv) as implemented by the [multiformats module](https://www.npmjs.com/package/multiformats).
 
 #### Example
 
@@ -102,7 +102,7 @@ console.info(fromString('01234', 'ascii')) // Uint8Array[48, 49 ...
 
 Returns a string created from the passed `Uint8Array` in the passed encoding.
 
-Supports `utf8` and any of the [multiformats encodings](https://www.npmjs.com/package/multibase#supported-encodings-see-srcconstantsjs).
+Supports `utf8` and any of the [multibase encodings](https://github.com/multiformats/multibase/blob/master/multibase.csv) as implemented by the [multiformats module](https://www.npmjs.com/package/multiformats).
 
 #### Example
 
