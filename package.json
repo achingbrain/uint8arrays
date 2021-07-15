@@ -45,7 +45,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "multiformats": "^9.3.0"
+    "multiformats": "^9.4.1"
   },
   "devDependencies": {
     "aegir": "^34.0.2",
