@@ -1,32 +1,15 @@
 'use strict'
 
-const { encoding: getCodec } = require('multibase')
-const utf8Encoder = new TextEncoder()
+const bases = require('./util/bases')
 
 /**
- * @typedef {import('multibase/src/types').BaseName | 'utf8' | 'utf-8' | 'ascii' | undefined} SupportedEncodings
+ * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
  */
-
-/**
- * Interprets each character in a string as a byte and
- * returns a Uint8Array of those bytes.
- *
- * @param {string} string - The string to turn into an array
- */
-function asciiStringToUint8Array (string) {
-  const array = new Uint8Array(string.length)
-
-  for (let i = 0; i < string.length; i++) {
-    array[i] = string.charCodeAt(i)
-  }
-
-  return array
-}
 
 /**
  * Create a `Uint8Array` from the passed string
  *
- * Supports `utf8`, `utf-8` and any encoding supported by the multibase module.
+ * Supports `utf8`, `utf-8`, `hex`, and any encoding supported by the multiformats module.
  *
  * Also `ascii` which is similar to node's 'binary' encoding.
  *
@@ -35,15 +18,14 @@ function asciiStringToUint8Array (string) {
  * @returns {Uint8Array}
  */
 function fromString (string, encoding = 'utf8') {
-  if (encoding === 'utf8' || encoding === 'utf-8') {
-    return utf8Encoder.encode(string)
+  const base = bases[encoding]
+
+  if (!base) {
+    throw new Error(`Unsupported encoding "${encoding}"`)
   }
 
-  if (encoding === 'ascii') {
-    return asciiStringToUint8Array(string)
-  }
-
-  return getCodec(encoding).decode(string)
+  // add multibase prefix
+  return base.decoder.decode(`${base.prefix}${string}`)
 }
 
 module.exports = fromString

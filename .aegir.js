@@ -3,7 +3,7 @@
 /** @type {import('aegir').PartialOptions} */
 module.exports = {
   build: {
-    bundlesizeMax: '11KB',
+    bundlesizeMax: '7KB',
     config: {
       entryPoints: ['index.js']
     }
