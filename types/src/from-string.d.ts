@@ -1,11 +1,6 @@
-'use strict'
-
-const bases = require('./util/bases')
-
 /**
  * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
  */
-
 /**
  * Create a `Uint8Array` from the passed string
  *
@@ -17,15 +12,6 @@ const bases = require('./util/bases')
  * @param {SupportedEncodings} [encoding=utf8] - utf8, base16, base64, base64urlpad, etc
  * @returns {Uint8Array}
  */
-function fromString (string, encoding = 'utf8') {
-  const base = bases[encoding]
-
-  if (!base) {
-    throw new Error(`Unsupported encoding "${encoding}"`)
-  }
-
-  // add multibase prefix
-  return base.decoder.decode(`${base.prefix}${string}`)
-}
-
-module.exports = fromString
+export function fromString(string: string, encoding?: import("./util/bases.js").SupportedEncodings | undefined): Uint8Array;
+export type SupportedEncodings = import('./util/bases').SupportedEncodings;
+//# sourceMappingURL=from-string.d.ts.map

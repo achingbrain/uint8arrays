@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Returns true if the two passed Uint8Arrays have the same content
  *
@@ -24,4 +22,4 @@ function equals (a, b) {
   return true
 }
 
-module.exports = equals
+export default equals

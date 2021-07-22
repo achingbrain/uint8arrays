@@ -1,6 +1,4 @@
-  'use strict'
-
-const { bases } = require('multiformats/basics')
+import { bases } from 'multiformats/basics'
 
 /**
  * @typedef {import('multiformats/bases/interface').MultibaseCodec<any>} MultibaseCodec
@@ -62,14 +60,14 @@ const ascii = createCodec('ascii', 'a', (buf) => {
  * @type {Record<SupportedEncodings, MultibaseCodec>}
  */
 const BASES = {
-  'utf8': string,
+  utf8: string,
   'utf-8': string,
-  'hex': bases.base16,
-  'latin1': ascii,
-  'ascii': ascii,
-  'binary': ascii,
+  hex: bases.base16,
+  latin1: ascii,
+  ascii: ascii,
+  binary: ascii,
 
   ...bases
 }
 
-module.exports = BASES
+export default BASES

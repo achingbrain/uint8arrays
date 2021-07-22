@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
  *
@@ -22,4 +20,4 @@ function concat (arrays, length) {
   return output
 }
 
-module.exports = concat
+export default concat
