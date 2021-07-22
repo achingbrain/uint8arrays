@@ -1,3 +1,17 @@
+## [3.0.1](https://github.com/achingbrain/uint8arrays/compare/v2.1.7...v3.0.1) (2021-07-22)
+
+
+### chore
+
+* switch to esm ([e19e9e4](https://github.com/achingbrain/uint8arrays/commit/e19e9e46b019823587d6edfaa5af95842d6af128))
+
+
+### BREAKING CHANGES
+
+* built content includes ESM and CJS
+
+
+
 ## [2.1.8](https://github.com/achingbrain/uint8arrays/compare/v2.1.7...v2.1.8) (2021-07-27)
 
 
