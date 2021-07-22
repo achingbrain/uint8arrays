@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-'use strict'
 
-const { expect } = require('aegir/utils/chai')
-const xor = require('../xor')
+// @ts-ignore
+import { expect } from 'aegir/utils/chai.js'
+import xor from '../src/xor.js'
 
 describe('Uint8Array xor', () => {
   it('xors 1,0 and 0,1', () => {

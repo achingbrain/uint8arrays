@@ -1,6 +1,4 @@
-'use strict'
-
-const bases = require('./util/bases')
+import bases from './util/bases.js'
 
 /**
  * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
@@ -28,4 +26,4 @@ function fromString (string, encoding = 'utf8') {
   return base.decoder.decode(`${base.prefix}${string}`)
 }
 
-module.exports = fromString
+export default fromString

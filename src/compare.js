@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Can be used with Array.sort to sort and array with Uint8Array entries
  *
@@ -28,4 +26,4 @@ function compare (a, b) {
   return 0
 }
 
-module.exports = compare
+export default compare

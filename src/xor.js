@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Returns the xor distance between two arrays
  *
@@ -20,4 +18,4 @@ function xor (a, b) {
   return result
 }
 
-module.exports = xor
+export default xor

@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-'use strict'
 
-const { expect } = require('aegir/utils/chai')
-const equals = require('../equals')
+// @ts-ignore
+import { expect } from 'aegir/utils/chai.js'
+import equals from '../src/equals.js'
 
 describe('Uint8Array equals', () => {
   it('finds two Uint8Arrays equal', () => {
