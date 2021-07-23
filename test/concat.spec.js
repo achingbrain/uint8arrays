@@ -1,6 +1,5 @@
 /* eslint-env mocha */
 
-// @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
 import { concat } from '../src/concat.js'
 

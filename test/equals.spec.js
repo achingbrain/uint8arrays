@@ -1,6 +1,5 @@
 /* eslint-env mocha */
 
-// @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
 import { equals } from '../src/equals.js'
 
