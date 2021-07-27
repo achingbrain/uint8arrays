@@ -1,3 +1,12 @@
+## [2.1.8](https://github.com/achingbrain/uint8arrays/compare/v2.1.7...v2.1.8) (2021-07-27)
+
+
+### Bug Fixes
+
+* include dist/utils/* files for distribution ([#24](https://github.com/achingbrain/uint8arrays/issues/24)) ([611f1f4](https://github.com/achingbrain/uint8arrays/commit/611f1f4d39604ffb1884bc611c28d971e0e69a77)), closes [#23](https://github.com/achingbrain/uint8arrays/issues/23)
+
+
+
 ## [2.1.7](https://github.com/achingbrain/uint8arrays/compare/v2.1.6...v2.1.7) (2021-07-15)
 
 
