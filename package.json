@@ -25,9 +25,9 @@
     "index.js",
     "to-string.js",
     "xor.js",
-    "dist/*.ts",
-    "dist/*.map",
-    "dist/*.js",
+    "dist/**/*.ts",
+    "dist/**/*.map",
+    "dist/**/*.js",
     "util/*.js"
   ],
   "repository": {
