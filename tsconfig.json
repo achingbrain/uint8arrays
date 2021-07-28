@@ -1,7 +1,7 @@
 {
   "extends": "aegir/src/config/tsconfig.aegir.json",
   "compilerOptions": {
-    "declarationDir": "./dist/types",
+    "outDir": "./types",
     "importsNotUsedAsValues": "preserve"
   },
   "include": [

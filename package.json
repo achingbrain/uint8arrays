@@ -7,7 +7,7 @@
   "homepage": "https://github.com/achingbrain/uint8arrays",
   "bugs": "https://github.com/achingbrain/uint8arrays/issues",
   "type": "module",
-  "types": "dist/types/index.d.ts",
+  "types": "types/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/achingbrain/uint8arrays.git"
@@ -40,10 +40,8 @@
   "typesVersions": {
     "*": {
       "*": [
-        "types/*"
-      ],
-      "types/*": [
-        "types/*"
+        "types/src",
+        "types/src/*"
       ]
     }
   },
