@@ -60,10 +60,10 @@
     "./equals": {
       "import": "./src/equals.js"
     },
-    "./fromString": {
+    "./from-string": {
       "import": "./src/from-string.js"
     },
-    "./toString": {
+    "./to-string": {
       "import": "./src/to-string.js"
     },
     "./xor": {
