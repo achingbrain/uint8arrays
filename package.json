@@ -1,6 +1,6 @@
 {
   "name": "@vascosantos/uint8arrays",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
   "main": "src/index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
@@ -91,11 +91,11 @@
   },
   "contributors": [
     "achingbrain <alex@achingbrain.net>",
-    "Cayman <caymannava@gmail.com>",
+    "Vasco Santos <vasco.santos@moxy.studio>",
     "Irakli Gozalishvili <contact@gozala.io>",
-    "Hugo Dias <hugomrdias@gmail.com>",
+    "Cayman <caymannava@gmail.com>",
     "Mircea Nistor <mirceanis@gmail.com>",
     "Rafael Ramalho <rafazelramalho19@gmail.com>",
-    "Vasco Santos <vasco.santos@moxy.studio>"
+    "Hugo Dias <hugomrdias@gmail.com>"
   ]
 }
