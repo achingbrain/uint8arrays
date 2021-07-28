@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
-import xor from '../src/xor.js'
+import { xor } from '../src/xor.js'
 
 describe('Uint8Array xor', () => {
   it('xors 1,0 and 0,1', () => {

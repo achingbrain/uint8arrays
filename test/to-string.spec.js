@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
-import toString from '../src/to-string.js'
+import { toString } from '../src/to-string.js'
 
 describe('Uint8Array toString', () => {
   it('creates a String from a Uint8Array', () => {

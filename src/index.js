@@ -1,9 +1,9 @@
-import compare from './compare.js'
-import concat from './concat.js'
-import equals from './equals.js'
-import fromString from './from-string.js'
-import toString from './to-string.js'
-import xor from './xor.js'
+import { compare } from './compare.js'
+import { concat } from './concat.js'
+import { equals } from './equals.js'
+import { fromString } from './from-string.js'
+import { toString } from './to-string.js'
+import { xor } from './xor.js'
 
 export {
   compare,

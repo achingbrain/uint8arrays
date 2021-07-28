@@ -4,7 +4,7 @@
  * @param {Uint8Array} a
  * @param {Uint8Array} b
  */
-function equals (a, b) {
+export function equals (a, b) {
   if (a === b) {
     return true
   }
@@ -21,5 +21,3 @@ function equals (a, b) {
 
   return true
 }
-
-export default equals

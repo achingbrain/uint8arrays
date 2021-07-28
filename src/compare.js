@@ -4,7 +4,7 @@
  * @param {Uint8Array} a
  * @param {Uint8Array} b
  */
-function compare (a, b) {
+export function compare (a, b) {
   for (let i = 0; i < a.byteLength; i++) {
     if (a[i] < b[i]) {
       return -1
@@ -25,5 +25,3 @@ function compare (a, b) {
 
   return 0
 }
-
-export default compare

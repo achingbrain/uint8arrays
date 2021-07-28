@@ -25,7 +25,7 @@ Compare two `Uint8Arrays`
 #### Example
 
 ```js
-const compare = require('uint8arrays/compare')
+import { compare } from 'uint8arrays/compare'
 
 const arrays = [
   Uint8Array.from([3, 4, 5]),
@@ -50,7 +50,7 @@ If you know the length of the arrays, pass it as a second parameter, otherwise i
 #### Example
 
 ```js
-const concat = require('uint8arrays/concat')
+import { concat } from 'uint8arrays/concat'
 
 const arrays = [
   Uint8Array.from([0, 1, 2]),
@@ -70,7 +70,7 @@ Returns true if the two arrays are the same array or if they have the same lengt
 #### Example
 
 ```js
-const equals = require('uint8arrays/equals')
+import { equals } from 'uint8arrays/equals'
 
 const a = Uint8Array.from([0, 1, 2])
 const b = Uint8Array.from([3, 4, 5])
@@ -90,7 +90,7 @@ Supports `utf8` and any of the [multibase encodings](https://github.com/multifor
 #### Example
 
 ```js
-const fromString = require('uint8arrays/from-string')
+import { fromString } from 'uint8arrays/from-string'
 
 console.info(fromString('hello world')) // Uint8Array[104, 101 ...
 console.info(fromString('00010203aabbcc', 'base16')) // Uint8Array[0, 1 ...
@@ -107,7 +107,7 @@ Supports `utf8` and any of the [multibase encodings](https://github.com/multifor
 #### Example
 
 ```js
-const toString = require('uint8arrays/to-string')
+import { toString } from 'uint8arrays/to-string'
 
 console.info(toString(Uint8Array.from([104, 101...]))) // 'hello world'
 console.info(toString(Uint8Array.from([0, 1, 2...]), 'base16')) // '00010203aabbcc'
@@ -122,7 +122,7 @@ Returns a `Uint8Array` containing `a` and `b` xored together.
 #### Example
 
 ```js
-const xor = require('uint8arrays/xor')
+import { xor } from 'uint8arrays/xor'
 
 console.info(xor(Uint8Array.from([1, 0]), Uint8Array.from([0, 1]))) // Uint8Array[1, 1]
 ```

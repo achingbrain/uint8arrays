@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
-import compare from '../src/compare.js'
+import { compare } from '../src/compare.js'
 
 describe('Uint8Array compare', () => {
   it('is stable', () => {

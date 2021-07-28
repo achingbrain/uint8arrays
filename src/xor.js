@@ -4,7 +4,7 @@
  * @param {Uint8Array} a
  * @param {Uint8Array} b
  */
-function xor (a, b) {
+export function xor (a, b) {
   if (a.length !== b.length) {
     throw new Error('Inputs should have the same length')
   }
@@ -17,5 +17,3 @@ function xor (a, b) {
 
   return result
 }
-
-export default xor

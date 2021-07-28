@@ -15,7 +15,7 @@ import bases from './util/bases.js'
  * @param {SupportedEncodings} [encoding=utf8] - The encoding to use
  * @returns {string}
  */
-function toString (array, encoding = 'utf8') {
+export function toString (array, encoding = 'utf8') {
   const base = bases[encoding]
 
   if (!base) {
@@ -25,5 +25,3 @@ function toString (array, encoding = 'utf8') {
   // strip multibase prefix
   return base.encoder.encode(array).substring(1)
 }
-
-export default toString

@@ -2,7 +2,7 @@
 
 // @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
-import equals from '../src/equals.js'
+import { equals } from '../src/equals.js'
 
 describe('Uint8Array equals', () => {
   it('finds two Uint8Arrays equal', () => {
