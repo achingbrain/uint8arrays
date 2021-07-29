@@ -1,6 +1,6 @@
 {
   "name": "@vascosantos/uint8arrays",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
   "main": "src/index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
