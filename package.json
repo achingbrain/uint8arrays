@@ -66,6 +66,27 @@
     },
     "./xor": {
       "import": "./src/xor.js"
+    },
+    "./index.js": {
+      "import": "./src/index.js"
+    },
+    "./compare.js": {
+      "import": "./src/compare.js"
+    },
+    "./concat.js": {
+      "import": "./src/concat.js"
+    },
+    "./equals.js": {
+      "import": "./src/equals.js"
+    },
+    "./from-string.js": {
+      "import": "./src/from-string.js"
+    },
+    "./to-string.js": {
+      "import": "./src/to-string.js"
+    },
+    "./xor.js": {
+      "import": "./src/xor.js"
     }
   },
   "contributors": [
