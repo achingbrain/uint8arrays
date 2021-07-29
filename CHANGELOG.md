@@ -1,3 +1,23 @@
+## [3.0.3](https://github.com/achingbrain/uint8arrays/compare/v2.1.7...v3.0.3) (2021-07-29)
+
+
+### Bug Fixes
+
+* include dist/utils/* files for distribution ([#24](https://github.com/achingbrain/uint8arrays/issues/24)) ([611f1f4](https://github.com/achingbrain/uint8arrays/commit/611f1f4d39604ffb1884bc611c28d971e0e69a77)), closes [#23](https://github.com/achingbrain/uint8arrays/issues/23)
+* use named exports ([f7fd981](https://github.com/achingbrain/uint8arrays/commit/f7fd98150c3eb82a671d3054928957eaca0cee87))
+
+
+### chore
+
+* switch to esm ([af071d9](https://github.com/achingbrain/uint8arrays/commit/af071d9eee49a0e11e101d73f0347b8fb08f54a0))
+
+
+### BREAKING CHANGES
+
+* built content includes ESM and CJS
+
+
+
 ## [3.0.2](https://github.com/achingbrain/uint8arrays/compare/v2.1.7...v3.0.2) (2021-07-28)
 
 
