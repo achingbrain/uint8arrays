@@ -18,7 +18,7 @@ jobs:
     - run: npx aegir build
     - run: npx aegir dep-check
     - uses: ipfs/aegir/actions/bundle-size@master
-       with:
+      with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
   test-node:
     needs: check
