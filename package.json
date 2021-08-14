@@ -25,7 +25,7 @@
     "multiformats": "^9.4.2"
   },
   "devDependencies": {
-    "aegir": "https://gitpkg.now.sh/ipfs/aegir?feat/build-esm-modules-follow-up",
+    "aegir": "^35.0.0",
     "util": "^0.12.4"
   },
   "eslintConfig": {
