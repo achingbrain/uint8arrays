@@ -1,6 +1,5 @@
 /* eslint-env mocha */
 
-// @ts-ignore
 import { expect } from 'aegir/utils/chai.js'
 import { fromString } from '../src/from-string.js'
 import { toString } from '../src/to-string.js'
