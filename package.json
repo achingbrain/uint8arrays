@@ -2,40 +2,17 @@
   "name": "uint8arrays",
   "version": "2.1.10",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
   "homepage": "https://github.com/achingbrain/uint8arrays",
   "bugs": "https://github.com/achingbrain/uint8arrays/issues",
-  "types": "dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "dist/*"
-      ],
-      "index.js": [
-        "dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "compare.js",
-    "concat.js",
-    "equals.js",
-    "from-string.js",
-    "index.js",
-    "to-string.js",
-    "xor.js",
-    "dist/**/*.ts",
-    "dist/**/*.map",
-    "dist/**/*.js",
-    "util/*.js"
-  ],
+  "type": "module",
+  "types": "types/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/achingbrain/uint8arrays.git"
   },
   "scripts": {
-    "prepare": "aegir build --no-bundle",
     "test": "aegir test",
     "lint": "aegir ts -p check && aegir lint",
     "release": "aegir release",
@@ -48,14 +25,48 @@
     "multiformats": "^9.4.2"
   },
   "devDependencies": {
-    "aegir": "^34.0.2",
+    "aegir": "^35.0.0",
     "util": "^0.12.4"
   },
   "eslintConfig": {
     "extends": "ipfs",
+    "parserOptions": {
+      "sourceType": "module"
+    },
     "ignorePatterns": [
       "!.aegir.js"
     ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "types/src",
+        "types/src/*"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    },
+    "./compare": {
+      "import": "./src/compare.js"
+    },
+    "./concat": {
+      "import": "./src/concat.js"
+    },
+    "./equals": {
+      "import": "./src/equals.js"
+    },
+    "./from-string": {
+      "import": "./src/from-string.js"
+    },
+    "./to-string": {
+      "import": "./src/to-string.js"
+    },
+    "./xor": {
+      "import": "./src/xor.js"
+    }
   },
   "contributors": [
     "achingbrain <alex@achingbrain.net>",

@@ -1,8 +1,7 @@
 /* eslint-env mocha */
-'use strict'
 
-const { expect } = require('aegir/utils/chai')
-const concat = require('../concat')
+import { expect } from 'aegir/utils/chai.js'
+import { concat } from '../src/concat.js'
 
 describe('Uint8Array concat', () => {
   it('concats two Uint8Arrays', () => {

@@ -1,6 +1,4 @@
-'use strict'
-
-const bases = require('./util/bases')
+import bases from './util/bases.js'
 
 /**
  * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
@@ -17,7 +15,7 @@ const bases = require('./util/bases')
  * @param {SupportedEncodings} [encoding=utf8] - utf8, base16, base64, base64urlpad, etc
  * @returns {Uint8Array}
  */
-function fromString (string, encoding = 'utf8') {
+export function fromString (string, encoding = 'utf8') {
   const base = bases[encoding]
 
   if (!base) {
@@ -27,5 +25,3 @@ function fromString (string, encoding = 'utf8') {
   // add multibase prefix
   return base.decoder.decode(`${base.prefix}${string}`)
 }
-
-module.exports = fromString

@@ -1,12 +1,10 @@
-'use strict'
-
 /**
  * Returns true if the two passed Uint8Arrays have the same content
  *
  * @param {Uint8Array} a
  * @param {Uint8Array} b
  */
-function equals (a, b) {
+export function equals (a, b) {
   if (a === b) {
     return true
   }
@@ -23,5 +21,3 @@ function equals (a, b) {
 
   return true
 }
-
-module.exports = equals

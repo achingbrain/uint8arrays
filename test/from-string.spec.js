@@ -1,12 +1,11 @@
 /* eslint-env mocha */
-'use strict'
 
-const { expect } = require('aegir/utils/chai')
-const fromString = require('../from-string')
-const toString = require('../to-string')
-const bases = require('../util/bases')
+import { expect } from 'aegir/utils/chai.js'
+import { fromString } from '../src/from-string.js'
+import { toString } from '../src/to-string.js'
+import bases from '../src/util/bases.js'
 
-/** @type {import('../util/bases').SupportedEncodings[]} */
+/** @type {import('../src/util/bases').SupportedEncodings[]} */
 // @ts-ignore Object.keys returns a string[]
 const supportedBases = Object.keys(bases)
 

@@ -1,12 +1,10 @@
-'use strict'
-
 /**
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
  *
  * @param {Array<ArrayLike<number>>} arrays
  * @param {number} [length]
  */
-function concat (arrays, length) {
+export function concat (arrays, length) {
   if (!length) {
     length = arrays.reduce((acc, curr) => acc + curr.length, 0)
   }
@@ -21,5 +19,3 @@ function concat (arrays, length) {
 
   return output
 }
-
-module.exports = concat

@@ -66,11 +66,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npx xvfb-maybe aegir test -t electron-main --bail
+      - run: npm run build -- --esm-tests # build tests with esm
+      - run: npx xvfb-maybe aegir test -t electron-main -f "dist/cjs/node-test/*js" --bail
   test-electron-renderer:
     needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npx xvfb-maybe aegir test -t electron-renderer --bail
+      - run: npm run build -- --esm-tests # build tests with esm
+      - run: npx xvfb-maybe aegir test -t electron-renderer -f "dist/cjs/node-test/*js" --bail

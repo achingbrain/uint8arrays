@@ -1,12 +1,10 @@
-'use strict'
-
 /**
  * Can be used with Array.sort to sort and array with Uint8Array entries
  *
  * @param {Uint8Array} a
  * @param {Uint8Array} b
  */
-function compare (a, b) {
+export function compare (a, b) {
   for (let i = 0; i < a.byteLength; i++) {
     if (a[i] < b[i]) {
       return -1
@@ -27,5 +25,3 @@ function compare (a, b) {
 
   return 0
 }
-
-module.exports = compare

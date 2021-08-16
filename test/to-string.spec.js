@@ -1,8 +1,7 @@
 /* eslint-env mocha */
-'use strict'
 
-const { expect } = require('aegir/utils/chai')
-const toString = require('../to-string')
+import { expect } from 'aegir/utils/chai.js'
+import { toString } from '../src/to-string.js'
 
 describe('Uint8Array toString', () => {
   it('creates a String from a Uint8Array', () => {
