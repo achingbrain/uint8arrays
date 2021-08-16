@@ -1,3 +1,7 @@
+# [3.0.0-rc.1](https://github.com/achingbrain/uint8arrays/compare/v3.0.0-rc.0...v3.0.0-rc.1) (2021-08-16)
+
+
+
 # [3.0.0-rc.0](https://github.com/achingbrain/uint8arrays/compare/v2.1.10...v3.0.0-rc.0) (2021-08-16)
 
 
