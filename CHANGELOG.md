@@ -1,3 +1,19 @@
+# [3.0.0-rc.0](https://github.com/achingbrain/uint8arrays/compare/v2.1.10...v3.0.0-rc.0) (2021-08-16)
+
+
+### chore
+
+* switch to esm ([#22](https://github.com/achingbrain/uint8arrays/issues/22)) ([ce698bc](https://github.com/achingbrain/uint8arrays/commit/ce698bcdadbb469fa6104d6f6adffa20d2336eb7))
+
+
+### BREAKING CHANGES
+
+* built content includes ESM and CJS and has switched to named exports for the external API
+
+Co-authored-by: Alex Potsides <alex@achingbrain.net>
+
+
+
 ## [2.1.10](https://github.com/achingbrain/uint8arrays/compare/v2.1.8...v2.1.10) (2021-08-01)
 
 
