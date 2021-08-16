@@ -20,7 +20,6 @@ jobs:
     - uses: ipfs/aegir/actions/bundle-size@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        project: dist/
   test-node:
     needs: check
     runs-on: ${{ matrix.os }}
