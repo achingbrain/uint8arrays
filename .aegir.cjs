@@ -12,3 +12,4 @@ module.exports = {
     entryPoint: 'index.js'
   }
 }
+
