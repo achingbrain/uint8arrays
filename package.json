@@ -25,7 +25,7 @@
     "multiformats": "^9.4.2"
   },
   "devDependencies": {
-    "aegir": "^35.0.0",
+    "aegir": "ipfs/aegir#try-flag",
     "util": "^0.12.4"
   },
   "eslintConfig": {
