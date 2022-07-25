@@ -1,4 +1,5 @@
 import { bases } from 'multiformats/basics'
+import { allocUnsafe } from './alloc-unsafe.js'
 
 /**
  * @typedef {import('multiformats/bases/interface').MultibaseCodec<any>} MultibaseCodec
@@ -43,7 +44,7 @@ const ascii = createCodec('ascii', 'a', (buf) => {
   return string
 }, (str) => {
   str = str.substring(1)
-  const buf = new Uint8Array(str.length)
+  const buf = allocUnsafe(str.length)
 
   for (let i = 0; i < str.length; i++) {
     buf[i] = str.charCodeAt(i)
