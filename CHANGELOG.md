@@ -1,3 +1,18 @@
+# [3.1.0](https://github.com/achingbrain/uint8arrays/compare/v3.0.0...v3.1.0) (2022-08-02)
+
+
+### Bug Fixes
+
+* use allocUnsafe where possible ([#34](https://github.com/achingbrain/uint8arrays/issues/34)) ([8b740e0](https://github.com/achingbrain/uint8arrays/commit/8b740e0865239e9d34c685bb792658262e9a51ef))
+* use Buffer.from for stringification where available ([#36](https://github.com/achingbrain/uint8arrays/issues/36)) ([0a18849](https://github.com/achingbrain/uint8arrays/commit/0a18849269ca8c9098e22f3d73755d1150f245dd))
+
+
+### Features
+
+* add alloc and allocUnsafe ([#31](https://github.com/achingbrain/uint8arrays/issues/31)) ([bd7147f](https://github.com/achingbrain/uint8arrays/commit/bd7147f56bb40222dffc7e19688075b17527acf4))
+
+
+
 # [3.0.0](https://github.com/achingbrain/uint8arrays/compare/v3.0.0-rc.1...v3.0.0) (2021-08-17)
 
 
