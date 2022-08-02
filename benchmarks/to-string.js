@@ -48,18 +48,6 @@ suite
       throw new Error('String encoding failed')
     }
   })
-  .add('Buffer.toString', function () {
-    if (globalThis.Buffer == null) {
-      throw new Error('Buffer is not available')
-    }
-
-    const buf = globalThis.Buffer.from(DATA.buffer, DATA.byteOffset, DATA.byteLength)
-    const res = buf.toString('utf8')
-
-    if (res !== string) {
-      throw new Error('String encoding failed')
-    }
-  })
   .add('utf8Read', () => {
     const res = utf8Read(DATA, 0, DATA.byteLength)
 
@@ -67,6 +55,19 @@ suite
       throw new Error('String encoding failed')
     }
   })
+
+if (globalThis.Buffer != null) {
+  suite.add('Buffer.toString', function () {
+    const buf = globalThis.Buffer.from(DATA.buffer, DATA.byteOffset, DATA.byteLength)
+    const res = buf.toString('utf8')
+
+    if (res !== string) {
+      throw new Error('String encoding failed')
+    }
+  })
+}
+
+suite
   // add listeners
   .on('cycle', (event) => {
     console.log(String(event.target))
