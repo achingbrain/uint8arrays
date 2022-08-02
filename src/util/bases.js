@@ -27,21 +27,11 @@ function createCodec (name, prefix, encode, decode) {
 }
 
 const string = createCodec('utf8', 'u', (buf) => {
-  if (globalThis.Buffer != null && globalThis.Buffer.from != null) {
-    return 'u' + globalThis.Buffer.from(buf.buffer, buf.byteOffset, buf.byteLength).toString('utf8')
-  }
-
   const decoder = new TextDecoder('utf8')
   return 'u' + decoder.decode(buf)
 }, (str) => {
-  str = str.substring(1)
-
-  if (globalThis.Buffer != null && globalThis.Buffer.from != null) {
-    return globalThis.Buffer.from(str, 'utf8')
-  }
-
   const encoder = new TextEncoder()
-  return encoder.encode(str)
+  return encoder.encode(str.substring(1))
 })
 
 const ascii = createCodec('ascii', 'a', (buf) => {
