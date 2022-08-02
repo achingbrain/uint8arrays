@@ -1,3 +1,5 @@
+import { allocUnsafe } from './alloc.js'
+
 /**
  * Returns the xor distance between two arrays
  *
@@ -9,7 +11,7 @@ export function xor (a, b) {
     throw new Error('Inputs should have the same length')
   }
 
-  const result = new Uint8Array(a.length)
+  const result = allocUnsafe(a.length)
 
   for (let i = 0; i < a.length; i++) {
     result[i] = a[i] ^ b[i]
