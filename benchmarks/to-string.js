@@ -40,29 +40,29 @@ function utf8ReadFromCharCode (buffer, start, end) {
 }
 
 // https://github.com/achingbrain/uint8arrays/issues/30#issuecomment-1199120924
-function utf8ReadConcat(buffer, start, end) {
+function utf8ReadConcat (buffer, start, end) {
   if (end - start < 1) {
-      return "";
+    return ''
   }
 
-  var str = "";
-  for (var i = start; i < end;) {
-      var t = buffer[i++];
-      if (t <= 0x7F) {
-          str += String.fromCharCode(t);
-      } else if (t >= 0xC0 && t < 0xE0) {
-          str += String.fromCharCode((t & 0x1F) << 6 | buffer[i++] & 0x3F);
-      } else if (t >= 0xE0 && t < 0xF0) {
-          str += String.fromCharCode((t & 0xF) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F);
-      } else if (t >= 0xF0) {
-          var t2 = ((t & 7) << 18 | (buffer[i++] & 0x3F) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F) - 0x10000;
-          str += String.fromCharCode(0xD800 + (t2 >> 10));
-          str += String.fromCharCode(0xDC00 + (t2 & 0x3FF));
-      }
+  let str = ''
+  for (let i = start; i < end;) {
+    const t = buffer[i++]
+    if (t <= 0x7F) {
+      str += String.fromCharCode(t)
+    } else if (t >= 0xC0 && t < 0xE0) {
+      str += String.fromCharCode((t & 0x1F) << 6 | buffer[i++] & 0x3F)
+    } else if (t >= 0xE0 && t < 0xF0) {
+      str += String.fromCharCode((t & 0xF) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F)
+    } else if (t >= 0xF0) {
+      const t2 = ((t & 7) << 18 | (buffer[i++] & 0x3F) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F) - 0x10000
+      str += String.fromCharCode(0xD800 + (t2 >> 10))
+      str += String.fromCharCode(0xDC00 + (t2 & 0x3FF))
+    }
   }
 
-  return str;
-};
+  return str
+}
 
 const suite = new Benchmark.Suite()
 
