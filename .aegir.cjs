@@ -5,10 +5,7 @@ module.exports = {
   build: {
     bundlesizeMax: '7KB',
     config: {
-      entryPoints: ['index.js']
+      entryPoints: ['src/index.js']
     }
-  },
-  docs: {
-    entryPoint: 'index.js'
   }
 }
