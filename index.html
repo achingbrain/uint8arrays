@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>uint8arrays - v2.1.9</title>
-	<meta name="description" content="Documentation for uint8arrays - v2.1.9">
+	<title>uint8arrays - v3.1.0</title>
+	<meta name="description" content="Documentation for uint8arrays - v3.1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">uint8arrays - v2.1.9</a>
+					<a href="index.html" class="title">uint8arrays - v3.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>uint8arrays - v2.1.9</h1>
+			<h1>uint8arrays - v3.1.0</h1>
 		</div>
 	</div>
 </header>
@@ -64,28 +64,36 @@
 				<p>Some utility functions to make dealing with <code>Uint8Array</code>s more pleasant.</p>
 				<ul>
 					<li><a href="#api">API</a><ul>
-							<li><a href="#comparea-b">compare(a, b)</a><ul>
+							<li><a href="#allocsize">alloc(size)</a><ul>
 									<li><a href="#example">Example</a></li>
 								</ul>
 							</li>
-							<li><a href="#concatarrays-length">concat(arrays, [length])</a><ul>
+							<li><a href="#allocunsafesize">allocUnsafe(size)</a><ul>
 									<li><a href="#example-1">Example</a></li>
 								</ul>
 							</li>
-							<li><a href="#equalsa-b">equals(a, b)</a><ul>
+							<li><a href="#comparea-b">compare(a, b)</a><ul>
 									<li><a href="#example-2">Example</a></li>
 								</ul>
 							</li>
-							<li><a href="#fromstringstring-encoding--utf8">fromString(string, encoding = &#39;utf8&#39;)</a><ul>
+							<li><a href="#concatarrays-length">concat(arrays, [length])</a><ul>
 									<li><a href="#example-3">Example</a></li>
 								</ul>
 							</li>
-							<li><a href="#tostringarray-encoding--utf8">toString(array, encoding = &#39;utf8&#39;)</a><ul>
+							<li><a href="#equalsa-b">equals(a, b)</a><ul>
 									<li><a href="#example-4">Example</a></li>
 								</ul>
 							</li>
-							<li><a href="#xora-b">xor(a, b)</a><ul>
+							<li><a href="#fromstringstring-encoding--utf8">fromString(string, encoding = &#39;utf8&#39;)</a><ul>
 									<li><a href="#example-5">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#tostringarray-encoding--utf8">toString(array, encoding = &#39;utf8&#39;)</a><ul>
+									<li><a href="#example-6">Example</a></li>
+								</ul>
+							</li>
+							<li><a href="#xora-b">xor(a, b)</a><ul>
+									<li><a href="#example-7">Example</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -94,14 +102,37 @@
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>
+				<a href="#allocsize" id="allocsize" style="color: inherit; text-decoration: none;">
+					<h3>alloc(size)</h3>
+				</a>
+				<p>Create a new <code>Uint8Array</code>. If <code>globalThis.Buffer</code> is defined, it will be used in preference to <code>globalThis.Uint8Array</code>.</p>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">alloc</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/alloc</span><span style="color: #CD3131">`</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">buf</span><span style="color: #000000"> = </span><span style="color: #795E26">alloc</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#allocunsafesize" id="allocunsafesize" style="color: inherit; text-decoration: none;">
+					<h3>allocUnsafe(size)</h3>
+				</a>
+				<p>Create a new <code>Uint8Array</code>. If <code>globalThis.Buffer</code> is defined, it will be used in preference to <code>globalThis.Uint8Array</code>.</p>
+				<p>On platforms that support it, memory referenced by the returned <code>Uint8Array</code> will not be initialized.</p>
+				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">allocUnsafe</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/alloc</span><span style="color: #CD3131">`</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">buf</span><span style="color: #000000"> = </span><span style="color: #795E26">allocUnsafe</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">)</span>
+</code></pre>
 				<a href="#comparea-b" id="comparea-b" style="color: inherit; text-decoration: none;">
 					<h3>compare(a, b)</h3>
 				</a>
 				<p>Compare two <code>Uint8Arrays</code></p>
-				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+				<a href="#example-2" id="example-2" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">compare</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/compare&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">compare</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/compare&#039;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">arrays</span><span style="color: #000000"> = [</span>
 <span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">]),</span>
@@ -121,10 +152,10 @@
 				</a>
 				<p>Concatenate one or more array-likes and return a <code>Uint8Array</code> with their contents.</p>
 				<p>If you know the length of the arrays, pass it as a second parameter, otherwise it will be calculated by traversing the list of arrays.</p>
-				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
+				<a href="#example-3" id="example-3" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">concat</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/concat&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">concat</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/concat&#039;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">arrays</span><span style="color: #000000"> = [</span>
 <span style="color: #000000">  </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]),</span>
@@ -140,10 +171,10 @@
 					<h3>equals(a, b)</h3>
 				</a>
 				<p>Returns true if the two arrays are the same array or if they have the same length and contents.</p>
-				<a href="#example-2" id="example-2" style="color: inherit; text-decoration: none;">
+				<a href="#example-4" id="example-4" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">equals</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/equals&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">equals</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/equals&#039;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">a</span><span style="color: #000000"> = </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">])</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">b</span><span style="color: #000000"> = </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">])</span>
@@ -158,10 +189,10 @@
 				</a>
 				<p>Returns a new <code>Uint8Array</code> created from the passed string and interpreted as the passed encoding.</p>
 				<p>Supports <code>utf8</code> and any of the <a href="https://github.com/multiformats/multibase/blob/master/multibase.csv">multibase encodings</a> as implemented by the <a href="https://www.npmjs.com/package/multiformats">multiformats module</a>.</p>
-				<a href="#example-3" id="example-3" style="color: inherit; text-decoration: none;">
+				<a href="#example-5" id="example-5" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">fromString</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/from-string&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">fromString</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/from-string&#039;</span>
 
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;hello world&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[104, 101 ...</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">fromString</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;00010203aabbcc&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;base16&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// Uint8Array[0, 1 ...</span>
@@ -173,10 +204,10 @@
 				</a>
 				<p>Returns a string created from the passed <code>Uint8Array</code> in the passed encoding.</p>
 				<p>Supports <code>utf8</code> and any of the <a href="https://github.com/multiformats/multibase/blob/master/multibase.csv">multibase encodings</a> as implemented by the <a href="https://www.npmjs.com/package/multiformats">multiformats module</a>.</p>
-				<a href="#example-4" id="example-4" style="color: inherit; text-decoration: none;">
+				<a href="#example-6" id="example-6" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">toString</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/to-string&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toString</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/to-string&#039;</span>
 
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">104</span><span style="color: #000000">, </span><span style="color: #098658">101.</span><span style="color: #000000">..]))) </span><span style="color: #008000">// &#039;hello world&#039;</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">toString</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2.</span><span style="color: #000000">..]), </span><span style="color: #A31515">&#039;base16&#039;</span><span style="color: #000000">)) </span><span style="color: #008000">// &#039;00010203aabbcc&#039;</span>
@@ -187,10 +218,10 @@
 					<h3>xor(a, b)</h3>
 				</a>
 				<p>Returns a <code>Uint8Array</code> containing <code>a</code> and <code>b</code> xored together.</p>
-				<a href="#example-5" id="example-5" style="color: inherit; text-decoration: none;">
+				<a href="#example-7" id="example-7" style="color: inherit; text-decoration: none;">
 					<h4>Example</h4>
 				</a>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">xor</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;uint8arrays/xor&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">xor</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uint8arrays/xor&#039;</span>
 
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #795E26">xor</span><span style="color: #000000">(</span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">]), </span><span style="color: #267F99">Uint8Array</span><span style="color: #000000">.</span><span style="color: #795E26">from</span><span style="color: #000000">([</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">]))) </span><span style="color: #008000">// Uint8Array[1, 1]</span>
 </code></pre>
