@@ -22,6 +22,10 @@ export function fromString (string, encoding = 'utf8') {
     throw new Error(`Unsupported encoding "${encoding}"`)
   }
 
+  if ((encoding === 'utf8' || encoding === 'utf-8') && globalThis.Buffer != null && globalThis.Buffer.from != null) {
+    return globalThis.Buffer.from(string, 'utf8')
+  }
+
   // add multibase prefix
   return base.decoder.decode(`${base.prefix}${string}`)
 }
