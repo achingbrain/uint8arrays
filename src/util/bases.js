@@ -37,7 +37,7 @@ const string = createCodec('utf8', 'u', (buf) => {
   str = str.substring(1)
 
   if (globalThis.Buffer != null && globalThis.Buffer.from != null) {
-    return globalThis.Buffer.from(str)
+    return globalThis.Buffer.from(str, 'utf8')
   }
 
   const encoder = new TextEncoder()
