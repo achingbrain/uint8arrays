@@ -7,7 +7,6 @@ $ npx playwright-test benchmarks/to-string.js --runner benchmark
 
 import Benchmark from 'benchmark'
 import { fromString } from '../src/from-string.js'
-import { toString } from '../src/to-string.js'
 
 const string = 'Hello world, this is a Uint8Array created from a string'
 const DATA = fromString(string)
@@ -42,8 +41,8 @@ function utf8Read (buffer, start, end) {
 const suite = new Benchmark.Suite()
 
 suite
-  .add('toString', () => {
-    const res = toString(DATA)
+  .add('TextDecoder', () => {
+    const res = new TextDecoder().decode(DATA)
 
     if (res !== string) {
       throw new Error('String encoding failed')
@@ -51,7 +50,7 @@ suite
   })
   .add('Buffer.toString', function () {
     if (globalThis.Buffer == null) {
-      return
+      throw new Error('Buffer is not available')
     }
 
     const buf = globalThis.Buffer.from(DATA.buffer, DATA.byteOffset, DATA.byteLength)
