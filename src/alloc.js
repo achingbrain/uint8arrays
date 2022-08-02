@@ -6,7 +6,7 @@
  * @returns {Uint8Array}
  */
 export function alloc (size = 0) {
-  if (globalThis.Buffer?.alloc != null) {
+  if (globalThis.Buffer != null && globalThis.Buffer.alloc != null) {
     return globalThis.Buffer.alloc(size)
   }
 
@@ -22,7 +22,7 @@ export function alloc (size = 0) {
  * @returns {Uint8Array}
  */
 export function allocUnsafe (size = 0) {
-  if (globalThis.Buffer?.allocUnsafe != null) {
+  if (globalThis.Buffer != null && globalThis.Buffer.allocUnsafe != null) {
     return globalThis.Buffer.allocUnsafe(size)
   }
 
