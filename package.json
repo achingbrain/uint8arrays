@@ -49,6 +49,9 @@
     ".": {
       "import": "./src/index.js"
     },
+    "./alloc": {
+      "import": "./src/alloc.js"
+    },
     "./compare": {
       "import": "./src/compare.js"
     },

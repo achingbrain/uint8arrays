@@ -3,20 +3,50 @@
 Some utility functions to make dealing with `Uint8Array`s more pleasant.
 
 - [API](#api)
-  - [compare(a, b)](#comparea-b)
+  - [alloc(size)](#allocsize)
     - [Example](#example)
-  - [concat(arrays, [length])](#concatarrays-length)
+  - [allocUnsafe(size)](#allocunsafesize)
     - [Example](#example-1)
-  - [equals(a, b)](#equalsa-b)
+  - [compare(a, b)](#comparea-b)
     - [Example](#example-2)
-  - [fromString(string, encoding = 'utf8')](#fromstringstring-encoding--utf8)
+  - [concat(arrays, [length])](#concatarrays-length)
     - [Example](#example-3)
-  - [toString(array, encoding = 'utf8')](#tostringarray-encoding--utf8)
+  - [equals(a, b)](#equalsa-b)
     - [Example](#example-4)
-  - [xor(a, b)](#xora-b)
+  - [fromString(string, encoding = 'utf8')](#fromstringstring-encoding--utf8)
     - [Example](#example-5)
+  - [toString(array, encoding = 'utf8')](#tostringarray-encoding--utf8)
+    - [Example](#example-6)
+  - [xor(a, b)](#xora-b)
+    - [Example](#example-7)
 
 ## API
+
+### alloc(size)
+
+Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+
+#### Example
+
+```js
+import { alloc } from 'uint8arrays/alloc`
+
+const buf = alloc(100)
+```
+
+### allocUnsafe(size)
+
+Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+
+On platforms that support it, memory referenced by the returned `Uint8Array` will not be initialized.
+
+#### Example
+
+```js
+import { allocUnsafe } from 'uint8arrays/alloc`
+
+const buf = allocUnsafe(100)
+```
 
 ### compare(a, b)
 

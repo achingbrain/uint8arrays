@@ -17,7 +17,7 @@ describe('Uint8Array fromString', () => {
     expect(fromString(str)).to.deep.equal(arr)
   })
 
-  supportedBases.forEach(base => {
+  supportedBases.filter(base => base !== 'base256emoji').forEach(base => {
     it(`creates a Uint8Array from a ${base} string`, () => {
       const arr = Uint8Array.from([0, 1, 2, 3])
       const str = toString(arr, base)
