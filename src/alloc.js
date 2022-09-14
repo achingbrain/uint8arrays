@@ -1,3 +1,5 @@
+import { asUint8Array } from './util/as-uint8array.js'
+
 /**
  * Returns a `Uint8Array` of the requested size. Referenced memory will
  * be initialized to 0.
@@ -7,7 +9,7 @@
  */
 export function alloc (size = 0) {
   if (globalThis.Buffer != null && globalThis.Buffer.alloc != null) {
-    return globalThis.Buffer.alloc(size)
+    return asUint8Array(globalThis.Buffer.alloc(size))
   }
 
   return new Uint8Array(size)
@@ -23,7 +25,7 @@ export function alloc (size = 0) {
  */
 export function allocUnsafe (size = 0) {
   if (globalThis.Buffer != null && globalThis.Buffer.allocUnsafe != null) {
-    return globalThis.Buffer.allocUnsafe(size)
+    return asUint8Array(globalThis.Buffer.allocUnsafe(size))
   }
 
   return new Uint8Array(size)

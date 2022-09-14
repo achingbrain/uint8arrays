@@ -1,4 +1,5 @@
 import { allocUnsafe } from './alloc.js'
+import { asUint8Array } from './util/as-uint8array.js'
 
 /**
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
@@ -19,5 +20,5 @@ export function concat (arrays, length) {
     offset += arr.length
   }
 
-  return output
+  return asUint8Array(output)
 }

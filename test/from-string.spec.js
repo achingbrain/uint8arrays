@@ -52,4 +52,12 @@ describe('Uint8Array fromString', () => {
     // @ts-expect-error 'derp' is not a valid encoding
     expect(() => fromString(str, 'derp')).to.throw(/Unsupported encoding/)
   })
+
+  it('fromString returns Uint8Array', () => {
+    const a = fromString('derp')
+    const slice = a.slice()
+
+    // node slice is a copy operation, Uint8Array slice is a no-copy operation
+    expect(slice.buffer).to.not.equal(a.buffer)
+  })
 })
