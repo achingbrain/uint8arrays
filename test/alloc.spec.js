@@ -22,4 +22,20 @@ describe('Uint8Array alloc', () => {
 
     expect(allocUnsafe(size)).to.have.property('byteLength', size)
   })
+
+  it('alloc returns Uint8Array', () => {
+    const a = alloc(10)
+    const slice = a.slice()
+
+    // node slice is a copy operation, Uint8Array slice is a no-copy operation
+    expect(slice.buffer).to.not.equal(a.buffer)
+  })
+
+  it('allocUnsafe returns Uint8Array', () => {
+    const a = allocUnsafe(10)
+    const slice = a.slice()
+
+    // node slice is a copy operation, Uint8Array slice is a no-copy operation
+    expect(slice.buffer).to.not.equal(a.buffer)
+  })
 })

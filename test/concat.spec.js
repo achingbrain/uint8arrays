@@ -35,4 +35,14 @@ describe('Uint8Array concat', () => {
 
     expect(concat([a, b], 8)).to.deep.equal(c)
   })
+
+  it('concat returns Uint8Array', () => {
+    const a = Uint8Array.from([0, 1, 2, 3])
+    const b = [4, 5, 6, 7]
+    const c = concat([a, b])
+    const slice = c.slice()
+
+    // node slice is a copy operation, Uint8Array slice is a no-copy operation
+    expect(slice.buffer).to.not.equal(c.buffer)
+  })
 })
