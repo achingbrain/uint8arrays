@@ -1,3 +1,12 @@
+## [3.1.1](https://github.com/achingbrain/uint8arrays/compare/v3.1.0...v3.1.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* always return uint8arrays ([#39](https://github.com/achingbrain/uint8arrays/issues/39)) ([017a456](https://github.com/achingbrain/uint8arrays/commit/017a456f7849700502d48b670c0caf5363854bcf)), closes [#38](https://github.com/achingbrain/uint8arrays/issues/38)
+
+
+
 # [3.1.0](https://github.com/achingbrain/uint8arrays/compare/v3.0.0...v3.1.0) (2022-08-02)
 
 
