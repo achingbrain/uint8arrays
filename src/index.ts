@@ -13,3 +13,5 @@ export {
   toString,
   xor
 }
+
+export type { SupportedEncodings } from './util/bases.js'
