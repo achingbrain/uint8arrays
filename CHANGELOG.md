@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/achingbrain/uint8arrays/compare/v4.0.1...v4.0.2) (2022-10-12)
+
+
+### Bug Fixes
+
+* update exports map paths ([#41](https://github.com/achingbrain/uint8arrays/issues/41)) ([4e78d9e](https://github.com/achingbrain/uint8arrays/commit/4e78d9e37d49bea4f0064f3ad9025febbf1584b2))
+
 ## [4.0.1](https://github.com/achingbrain/uint8arrays/compare/v4.0.0...v4.0.1) (2022-10-12)
 
 
