@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 
-import { expect } from 'aegir/utils/chai.js'
+import { expect } from 'aegir/chai'
 import { compare } from '../src/compare.js'
 
 describe('Uint8Array compare', () => {

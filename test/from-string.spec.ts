@@ -1,13 +1,11 @@
 /* eslint-env mocha */
 
-import { expect } from 'aegir/utils/chai.js'
+import { expect } from 'aegir/chai'
 import { fromString } from '../src/from-string.js'
 import { toString } from '../src/to-string.js'
-import bases from '../src/util/bases.js'
+import bases, { SupportedEncodings } from '../src/util/bases.js'
 
-/** @type {import('../src/util/bases').SupportedEncodings[]} */
-// @ts-ignore Object.keys returns a string[]
-const supportedBases = Object.keys(bases)
+const supportedBases = Object.keys(bases) as SupportedEncodings[]
 
 describe('Uint8Array fromString', () => {
   it('creates a Uint8Array from a string', () => {

@@ -6,7 +6,7 @@ $ npx playwright-test benchmarks/to-string.js --runner benchmark
 */
 
 import Benchmark from 'benchmark'
-import { fromString } from '../src/from-string.js'
+import { fromString } from '../dist/src/from-string.js'
 
 const string = 'Hello world, this is a Uint8Array created from a string'
 const DATA = fromString(string)

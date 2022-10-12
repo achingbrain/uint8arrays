@@ -2,84 +2,187 @@
   "name": "uint8arrays",
   "version": "3.1.1",
   "description": "Utility functions to make dealing with Uint8Arrays easier",
-  "main": "src/index.js",
   "author": "Alex Potsides <alex@achingbrain.net>",
-  "homepage": "https://github.com/achingbrain/uint8arrays",
-  "bugs": "https://github.com/achingbrain/uint8arrays/issues",
-  "type": "module",
-  "types": "types/src/index.d.ts",
+  "license": "Apache-2.0 OR MIT",
+  "homepage": "https://github.com/achingbrain/uint8arrays#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/achingbrain/uint8arrays.git"
+    "url": "git+https://github.com/achingbrain/uint8arrays.git"
   },
-  "scripts": {
-    "test": "aegir test",
-    "lint": "aegir ts -p check && aegir lint",
-    "release": "aegir release",
-    "release-minor": "aegir release --type minor",
-    "release-major": "aegir release --type major",
-    "build": "aegir build"
+  "bugs": {
+    "url": "https://github.com/achingbrain/uint8arrays/issues"
   },
-  "license": "MIT",
-  "dependencies": {
-    "multiformats": "^9.4.2"
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
-  "devDependencies": {
-    "@types/benchmark": "^2.1.1",
-    "aegir": "^35.0.0",
-    "benchmark": "^2.1.4",
-    "util": "^0.12.4"
+  "type": "module",
+  "types": "./dist/src/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
+      ],
+      "src/*": [
+        "*",
+        "dist/*",
+        "dist/src/*",
+        "dist/src/*/index"
+      ]
+    }
+  },
+  "files": [
+    "src",
+    "dist/src",
+    "!dist/test",
+    "!**/*.tsbuildinfo"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./alloc": {
+      "types": "./src/alloc.d.ts",
+      "import": "./src/alloc.js"
+    },
+    "./compare": {
+      "types": "./src/compare.d.ts",
+      "import": "./src/compare.js"
+    },
+    "./concat": {
+      "types": "./src/concat.d.ts",
+      "import": "./src/concat.js"
+    },
+    "./equals": {
+      "types": "./src/equals.d.ts",
+      "import": "./src/equals.js"
+    },
+    "./from-string": {
+      "types": "./src/from-string.d.ts",
+      "import": "./src/from-string.js"
+    },
+    "./to-string": {
+      "types": "./src/to-string.d.ts",
+      "import": "./src/to-string.js"
+    },
+    "./xor": {
+      "types": "./src/xor.d.ts",
+      "import": "./src/xor.js"
+    }
   },
   "eslintConfig": {
     "extends": "ipfs",
     "parserOptions": {
       "sourceType": "module"
-    },
-    "ignorePatterns": [
-      "!.aegir.js"
+    }
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "breaking": true,
+              "release": "major"
+            },
+            {
+              "revert": true,
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "deps",
+              "release": "patch"
+            },
+            {
+              "scope": "no-release",
+              "release": false
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "chore",
+                "section": "Trivial Changes"
+              },
+              {
+                "type": "docs",
+                "section": "Documentation"
+              },
+              {
+                "type": "deps",
+                "section": "Dependencies"
+              },
+              {
+                "type": "test",
+                "section": "Tests"
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
     ]
   },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "types/src",
-        "types/src/*"
-      ]
-    }
+  "scripts": {
+    "clean": "aegir clean",
+    "test": "aegir test",
+    "test:node": "aegir test -t node --cov",
+    "test:chrome": "aegir test -t browser --cov",
+    "test:chrome-webworker": "aegir test -t webworker --cov",
+    "test:firefox": "aegir test -t browser -- --browser firefox",
+    "test:firefox-webworker": "aegir test -t webworker -- --browser firefox",
+    "lint": "aegir lint",
+    "release": "aegir release",
+    "build": "aegir build"
   },
-  "exports": {
-    ".": {
-      "import": "./src/index.js"
-    },
-    "./alloc": {
-      "import": "./src/alloc.js"
-    },
-    "./compare": {
-      "import": "./src/compare.js"
-    },
-    "./concat": {
-      "import": "./src/concat.js"
-    },
-    "./equals": {
-      "import": "./src/equals.js"
-    },
-    "./from-string": {
-      "import": "./src/from-string.js"
-    },
-    "./to-string": {
-      "import": "./src/to-string.js"
-    },
-    "./xor": {
-      "import": "./src/xor.js"
-    }
+  "dependencies": {
+    "multiformats": "^10.0.0"
   },
-  "contributors": [
-    "achingbrain <alex@achingbrain.net>",
-    "Cayman <caymannava@gmail.com>",
-    "Irakli Gozalishvili <contact@gozala.io>",
-    "Hugo Dias <hugomrdias@gmail.com>",
-    "Mircea Nistor <mirceanis@gmail.com>",
-    "Rafael Ramalho <rafazelramalho19@gmail.com>",
-    "Vasco Santos <vasco.santos@ua.pt>"
-  ]
+  "devDependencies": {
+    "@types/benchmark": "^2.1.1",
+    "aegir": "^37.5.5",
+    "benchmark": "^2.1.4"
+  }
 }

@@ -3,12 +3,9 @@ import { asUint8Array } from './util/as-uint8array.js'
 
 /**
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
- *
- * @param {Array<ArrayLike<number>>} arrays
- * @param {number} [length]
  */
-export function concat (arrays, length) {
-  if (!length) {
+export function concat (arrays: Array<ArrayLike<number>>, length?: number): Uint8Array {
+  if (length == null) {
     length = arrays.reduce((acc, curr) => acc + curr.length, 0)
   }
 
