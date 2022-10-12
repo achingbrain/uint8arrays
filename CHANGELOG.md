@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/achingbrain/uint8arrays/compare/v4.0.0...v4.0.1) (2022-10-12)
+
+
+### Bug Fixes
+
+* export SupportedEncodings from to-string and from-string ([#40](https://github.com/achingbrain/uint8arrays/issues/40)) ([d3f1412](https://github.com/achingbrain/uint8arrays/commit/d3f1412443fb6832deccfe6f341dc482f6a781b2))
+
 ## [4.0.0](https://github.com/achingbrain/uint8arrays/compare/v3.1.1...v4.0.0) (2022-10-12)
 
 
