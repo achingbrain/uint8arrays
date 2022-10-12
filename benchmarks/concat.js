@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
 
 /*
-$ node benchmarks/to-string.js
-$ npx playwright-test benchmarks/to-string.js --runner benchmark
+$ node benchmarks/concat.js
+$ npx playwright-test benchmarks/concat.js --runner benchmark
 */
 
 import Benchmark from 'benchmark'
-import { fromString } from '../src/from-string.js'
-import { concat } from '../src/concat.js'
-import { allocUnsafe } from '../src/alloc.js'
+import { fromString } from '../dist/src/from-string.js'
+import { concat } from '../dist/src/concat.js'
+import { allocUnsafe } from '../dist/src/alloc.js'
 
 const string = 'Hello world, this is a Uint8Array created from a string'
 const DATA1 = fromString(string)

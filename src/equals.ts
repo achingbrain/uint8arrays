@@ -1,10 +1,7 @@
 /**
  * Returns true if the two passed Uint8Arrays have the same content
- *
- * @param {Uint8Array} a
- * @param {Uint8Array} b
  */
-export function equals (a, b) {
+export function equals (a: Uint8Array, b: Uint8Array): boolean {
   if (a === b) {
     return true
   }

@@ -1,7 +1,13 @@
-# Uint8Arrays <!-- omit in toc -->
+# uint8arrays <!-- omit in toc -->
 
-Some utility functions to make dealing with `Uint8Array`s more pleasant.
+[![codecov](https://img.shields.io/codecov/c/github/achingbrain/uint8arrays.svg?style=flat-square)](https://codecov.io/gh/achingbrain/uint8arrays)
+[![CI](https://img.shields.io/github/workflow/status/achingbrain/uint8arrays/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/achingbrain/uint8arrays/actions/workflows/js-test-and-release.yml)
 
+> Utility functions to make dealing with Uint8Arrays easier
+
+## Table of contents <!-- omit in toc -->
+
+- [Install](#install)
 - [API](#api)
   - [alloc(size)](#allocsize)
     - [Example](#example)
@@ -9,7 +15,7 @@ Some utility functions to make dealing with `Uint8Array`s more pleasant.
     - [Example](#example-1)
   - [compare(a, b)](#comparea-b)
     - [Example](#example-2)
-  - [concat(arrays, [length])](#concatarrays-length)
+  - [concat(arrays, \[length])](#concatarrays-length)
     - [Example](#example-3)
   - [equals(a, b)](#equalsa-b)
     - [Example](#example-4)
@@ -19,6 +25,35 @@ Some utility functions to make dealing with `Uint8Array`s more pleasant.
     - [Example](#example-6)
   - [xor(a, b)](#xora-b)
     - [Example](#example-7)
+- [License](#license)
+- [Contribute](#contribute)
+
+## Install
+
+```console
+$ npm i uint8arrays
+```
+
+- [Install](#install)
+- [API](#api)
+  - [alloc(size)](#allocsize)
+    - [Example](#example)
+  - [allocUnsafe(size)](#allocunsafesize)
+    - [Example](#example-1)
+  - [compare(a, b)](#comparea-b)
+    - [Example](#example-2)
+  - [concat(arrays, \[length])](#concatarrays-length)
+    - [Example](#example-3)
+  - [equals(a, b)](#equalsa-b)
+    - [Example](#example-4)
+  - [fromString(string, encoding = 'utf8')](#fromstringstring-encoding--utf8)
+    - [Example](#example-5)
+  - [toString(array, encoding = 'utf8')](#tostringarray-encoding--utf8)
+    - [Example](#example-6)
+  - [xor(a, b)](#xora-b)
+    - [Example](#example-7)
+- [License](#license)
+- [Contribute](#contribute)
 
 ## API
 
@@ -71,7 +106,7 @@ console.info(sorted)
 // ]
 ```
 
-### concat(arrays, [length])
+### concat(arrays, \[length])
 
 Concatenate one or more array-likes and return a `Uint8Array` with their contents.
 
@@ -156,3 +191,14 @@ import { xor } from 'uint8arrays/xor'
 
 console.info(xor(Uint8Array.from([1, 0]), Uint8Array.from([0, 1]))) // Uint8Array[1, 1]
 ```
+
+## License
+
+Licensed under either of
+
+- Apache 2.0, ([LICENSE-APACHE](LICENSE-APACHE) / <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT ([LICENSE-MIT](LICENSE-MIT) / <http://opensource.org/licenses/MIT>)
+
+## Contribute
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.

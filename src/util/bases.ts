@@ -1,18 +1,8 @@
+import type { MultibaseCodec } from 'multiformats'
 import { bases } from 'multiformats/basics'
 import { allocUnsafe } from '../alloc.js'
 
-/**
- * @typedef {import('multiformats/bases/interface').MultibaseCodec<any>} MultibaseCodec
- */
-
-/**
- * @param {string} name
- * @param {string} prefix
- * @param {(buf: Uint8Array) => string} encode
- * @param {(str: string) => Uint8Array} decode
- * @returns {MultibaseCodec}
- */
-function createCodec (name, prefix, encode, decode) {
+function createCodec (name: string, prefix: string, encode: (buf: Uint8Array) => string, decode: (str: string) => Uint8Array): MultibaseCodec<any> {
   return {
     name,
     prefix,
@@ -53,14 +43,9 @@ const ascii = createCodec('ascii', 'a', (buf) => {
   return buf
 })
 
-/**
- * @typedef {'utf8' | 'utf-8' | 'hex' | 'latin1' | 'ascii' | 'binary' | keyof bases } SupportedEncodings
- */
+export type SupportedEncodings = 'utf8' | 'utf-8' | 'hex' | 'latin1' | 'ascii' | 'binary' | keyof typeof bases
 
-/**
- * @type {Record<SupportedEncodings, MultibaseCodec>}
- */
-const BASES = {
+const BASES: Record<SupportedEncodings, MultibaseCodec<any>> = {
   utf8: string,
   'utf-8': string,
   hex: bases.base16,

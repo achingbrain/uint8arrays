@@ -1,10 +1,7 @@
 /**
  * Can be used with Array.sort to sort and array with Uint8Array entries
- *
- * @param {Uint8Array} a
- * @param {Uint8Array} b
  */
-export function compare (a, b) {
+export function compare (a: Uint8Array, b: Uint8Array): number {
   for (let i = 0; i < a.byteLength; i++) {
     if (a[i] < b[i]) {
       return -1

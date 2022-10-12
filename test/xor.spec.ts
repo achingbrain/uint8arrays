@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 
-import { expect } from 'aegir/utils/chai.js'
+import { expect } from 'aegir/chai'
 import { xor } from '../src/xor.js'
 
 describe('Uint8Array xor', () => {

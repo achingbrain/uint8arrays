@@ -1,4 +1,4 @@
-import bases from './util/bases.js'
+import bases, { SupportedEncodings } from './util/bases.js'
 
 /**
  * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
@@ -10,15 +10,11 @@ import bases from './util/bases.js'
  * Supports `utf8`, `utf-8` and any encoding supported by the multibase module.
  *
  * Also `ascii` which is similar to node's 'binary' encoding.
- *
- * @param {Uint8Array} array - The array to turn into a string
- * @param {SupportedEncodings} [encoding=utf8] - The encoding to use
- * @returns {string}
  */
-export function toString (array, encoding = 'utf8') {
+export function toString (array: Uint8Array, encoding: SupportedEncodings = 'utf8'): string {
   const base = bases[encoding]
 
-  if (!base) {
+  if (base == null) {
     throw new Error(`Unsupported encoding "${encoding}"`)
   }
 
