@@ -1,3 +1,19 @@
+## [4.0.0](https://github.com/achingbrain/uint8arrays/compare/v3.1.1...v4.0.0) (2022-10-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* this module is now ESM-only
+
+### Features
+
+* convert to typescript and release as ESM-only ([#28](https://github.com/achingbrain/uint8arrays/issues/28)) ([e4c9627](https://github.com/achingbrain/uint8arrays/commit/e4c9627da195b419ee9f8c45d45931f537c5dee1))
+
+
+### Documentation
+
+* fix readme header ([803cb5f](https://github.com/achingbrain/uint8arrays/commit/803cb5fa64892451d73ca0494b1e2a57ae1ef533))
+
 ## [3.1.1](https://github.com/achingbrain/uint8arrays/compare/v3.1.0...v3.1.1) (2022-10-10)
 
 
@@ -178,6 +194,3 @@ Co-authored-by: Alex Potsides <alex@achingbrain.net>
 ### Features
 
 * add implementation ([2c849dc](https://github.com/achingbrain/uint8arrays/commit/2c849dc))
-
-
-
