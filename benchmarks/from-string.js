@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 
 /*
-$ node benchmarks/to-string.js
-$ npx playwright-test benchmarks/to-string.js --runner benchmark
+$ node benchmarks/from-string.js
+$ npx playwright-test benchmarks/from-string.js --runner benchmark
 */
 
 import Benchmark from 'benchmark'
