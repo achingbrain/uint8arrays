@@ -1,6 +1,8 @@
 import bases, { SupportedEncodings } from './util/bases.js'
 import { asUint8Array } from './util/as-uint8array.js'
 
+export type { SupportedEncodings }
+
 /**
  * Create a `Uint8Array` from the passed string
  *

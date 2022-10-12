@@ -1,8 +1,6 @@
 import bases, { SupportedEncodings } from './util/bases.js'
 
-/**
- * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
- */
+export type { SupportedEncodings }
 
 /**
  * Turns a `Uint8Array` into a string.

@@ -1,9 +1,9 @@
 /* eslint-env mocha */
 
 import { expect } from 'aegir/chai'
-import { fromString } from '../src/from-string.js'
+import { fromString, SupportedEncodings } from '../src/from-string.js'
 import { toString } from '../src/to-string.js'
-import bases, { SupportedEncodings } from '../src/util/bases.js'
+import bases from '../src/util/bases.js'
 
 const supportedBases = Object.keys(bases) as SupportedEncodings[]
 
