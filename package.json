@@ -43,35 +43,43 @@
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
-      "import": "./dist/src/index.js"
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.js"
     },
     "./alloc": {
       "types": "./dist/src/alloc.d.ts",
-      "import": "./dist/src/alloc.js"
+      "import": "./dist/src/alloc.js",
+      "require": "./dist/src/alloc.js"
     },
     "./compare": {
       "types": "./dist/src/compare.d.ts",
-      "import": "./dist/src/compare.js"
+      "import": "./dist/src/compare.js",
+      "require": "./dist/src/compare.js"
     },
     "./concat": {
       "types": "./dist/src/concat.d.ts",
-      "import": "./dist/src/concat.js"
+      "import": "./dist/src/concat.js",
+      "require": "./dist/src/concat.js"
     },
     "./equals": {
       "types": "./dist/src/equals.d.ts",
-      "import": "./dist/src/equals.js"
+      "import": "./dist/src/equals.js",
+      "require": "./dist/src/equals.js"
     },
     "./from-string": {
       "types": "./dist/src/from-string.d.ts",
-      "import": "./dist/src/from-string.js"
+      "import": "./dist/src/from-string.js",
+      "require": "./dist/src/from-string.js"
     },
     "./to-string": {
       "types": "./dist/src/to-string.d.ts",
-      "import": "./dist/src/to-string.js"
+      "import": "./dist/src/to-string.js",
+      "require": "./dist/src/to-string.js"
     },
     "./xor": {
       "types": "./dist/src/xor.d.ts",
-      "import": "./dist/src/xor.js"
+      "import": "./dist/src/xor.js",
+      "require": "./dist/src/xor.js"
     }
   },
   "eslintConfig": {
