@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/achingbrain/uint8arrays/compare/v4.0.2...v4.0.3) (2023-01-06)
+
+
+### Dependencies
+
+* bump multiformats from 10.0.3 to 11.0.0 ([#43](https://github.com/achingbrain/uint8arrays/issues/43)) ([1bfbcaa](https://github.com/achingbrain/uint8arrays/commit/1bfbcaaf3ebe437e727f519f864c6e697feb3959))
+
 ## [4.0.2](https://github.com/achingbrain/uint8arrays/compare/v4.0.1...v4.0.2) (2022-10-12)
 
 
