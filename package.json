@@ -178,7 +178,7 @@
     "build": "aegir build"
   },
   "dependencies": {
-    "multiformats": "^10.0.0"
+    "multiformats": "^11.0.0"
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
