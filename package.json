@@ -182,7 +182,7 @@
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
-    "aegir": "^37.5.5",
+    "aegir": "^38.1.7",
     "benchmark": "^2.1.4"
   }
 }
