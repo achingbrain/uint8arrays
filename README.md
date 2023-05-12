@@ -42,7 +42,7 @@ $ npm i uint8arrays
     - [Example](#example-1)
   - [compare(a, b)](#comparea-b)
     - [Example](#example-2)
-  - [concat(arrays, \[length])](#concatarrays-length)
+  - [concat(arrays, [length])](#concatarrays-length)
     - [Example](#example-3)
   - [equals(a, b)](#equalsa-b)
     - [Example](#example-4)
