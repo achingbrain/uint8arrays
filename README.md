@@ -35,7 +35,6 @@
 $ npm i uint8arrays
 ```
 
-=======
 ### Browser `<script>` tag
 
 Loading this module through a script tag will make it's exports available as `Uint8arrays` in the global namespace.
