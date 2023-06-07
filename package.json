@@ -12,10 +12,6 @@
   "bugs": {
     "url": "https://github.com/achingbrain/uint8arrays/issues"
   },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
-  },
   "type": "module",
   "types": "./dist/src/index.d.ts",
   "typesVersions": {
@@ -36,7 +32,7 @@
   },
   "files": [
     "src",
-    "dist/src",
+    "dist",
     "!dist/test",
     "!**/*.tsbuildinfo"
   ],
@@ -175,14 +171,15 @@
     "test:firefox-webworker": "aegir test -t webworker -- --browser firefox",
     "lint": "aegir lint",
     "release": "aegir release",
-    "build": "aegir build"
+    "build": "aegir build",
+    "dep-check": "aegir dep-check"
   },
   "dependencies": {
     "multiformats": "^11.0.0"
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
-    "aegir": "^37.5.5",
+    "aegir": "^39.0.9",
     "benchmark": "^2.1.4"
   }
 }

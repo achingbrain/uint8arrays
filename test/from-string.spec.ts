@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'aegir/chai'
-import { fromString, SupportedEncodings } from '../src/from-string.js'
+import { fromString, type SupportedEncodings } from '../src/from-string.js'
 import { toString } from '../src/to-string.js'
 import bases from '../src/util/bases.js'
 

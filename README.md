@@ -1,13 +1,14 @@
 # uint8arrays <!-- omit in toc -->
 
 [![codecov](https://img.shields.io/codecov/c/github/achingbrain/uint8arrays.svg?style=flat-square)](https://codecov.io/gh/achingbrain/uint8arrays)
-[![CI](https://img.shields.io/github/workflow/status/achingbrain/uint8arrays/test%20&%20maybe%20release/master?style=flat-square)](https://github.com/achingbrain/uint8arrays/actions/workflows/js-test-and-release.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/achingbrain/uint8arrays/js-test-and-release.yml?branch=master\&style=flat-square)](https://github.com/achingbrain/uint8arrays/actions/workflows/js-test-and-release.yml?query=branch%3Amaster)
 
 > Utility functions to make dealing with Uint8Arrays easier
 
 ## Table of contents <!-- omit in toc -->
 
 - [Install](#install)
+  - [Browser `<script>` tag](#browser-script-tag)
 - [API](#api)
   - [alloc(size)](#allocsize)
     - [Example](#example)
@@ -15,7 +16,7 @@
     - [Example](#example-1)
   - [compare(a, b)](#comparea-b)
     - [Example](#example-2)
-  - [concat(arrays, [length])](#concatarrays-length)
+  - [concat(arrays, \[length\])](#concatarrays-length)
     - [Example](#example-3)
   - [equals(a, b)](#equalsa-b)
     - [Example](#example-4)
@@ -26,12 +27,21 @@
   - [xor(a, b)](#xora-b)
     - [Example](#example-7)
 - [License](#license)
-- [Contribute](#contribute)
+- [Contribution](#contribution)
 
 ## Install
 
 ```console
 $ npm i uint8arrays
+```
+
+=======
+### Browser `<script>` tag
+
+Loading this module through a script tag will make it's exports available as `Uint8arrays` in the global namespace.
+
+```html
+<script src="https://unpkg.com/uint8arrays/dist/index.min.js"></script>
 ```
 
 ## API
@@ -178,6 +188,6 @@ Licensed under either of
 - Apache 2.0, ([LICENSE-APACHE](LICENSE-APACHE) / <http://www.apache.org/licenses/LICENSE-2.0>)
 - MIT ([LICENSE-MIT](LICENSE-MIT) / <http://opensource.org/licenses/MIT>)
 
-## Contribute
+## Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.

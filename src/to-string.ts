@@ -1,4 +1,4 @@
-import bases, { SupportedEncodings } from './util/bases.js'
+import bases, { type SupportedEncodings } from './util/bases.js'
 
 export type { SupportedEncodings }
 
