@@ -1,5 +1,9 @@
 node_modules
+build
 dist
-types
-docs
+.docs
+.coverage
+node_modules
 package-lock.json
+yarn.lock
+.vscode

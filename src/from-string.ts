@@ -1,5 +1,5 @@
-import bases, { SupportedEncodings } from './util/bases.js'
 import { asUint8Array } from './util/as-uint8array.js'
+import bases, { type SupportedEncodings } from './util/bases.js'
 
 export type { SupportedEncodings }
 
