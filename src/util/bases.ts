@@ -1,6 +1,6 @@
-import type { MultibaseCodec } from 'multiformats'
 import { bases } from 'multiformats/basics'
 import { allocUnsafe } from '../alloc.js'
+import type { MultibaseCodec } from 'multiformats'
 
 function createCodec (name: string, prefix: string, encode: (buf: Uint8Array) => string, decode: (str: string) => Uint8Array): MultibaseCodec<any> {
   return {
@@ -50,7 +50,7 @@ const BASES: Record<SupportedEncodings, MultibaseCodec<any>> = {
   'utf-8': string,
   hex: bases.base16,
   latin1: ascii,
-  ascii: ascii,
+  ascii,
   binary: ascii,
 
   ...bases
