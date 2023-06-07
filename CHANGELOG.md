@@ -1,3 +1,15 @@
+## [4.0.4](https://github.com/achingbrain/uint8arrays/compare/v4.0.3...v4.0.4) (2023-06-07)
+
+
+### Dependencies
+
+* **dev:** bump aegir from 37.12.1 to 38.1.8 ([#50](https://github.com/achingbrain/uint8arrays/issues/50)) ([15d15d6](https://github.com/achingbrain/uint8arrays/commit/15d15d6a8297832e6d4a29bc150fd004f4899fd6))
+
+
+### Documentation
+
+* Remove duplicate content section in readme. ([#51](https://github.com/achingbrain/uint8arrays/issues/51)) ([686b669](https://github.com/achingbrain/uint8arrays/commit/686b669a1c0e9136965e3c1e30eab076bb2fa544))
+
 ## [4.0.3](https://github.com/achingbrain/uint8arrays/compare/v4.0.2...v4.0.3) (2023-01-06)
 
 
