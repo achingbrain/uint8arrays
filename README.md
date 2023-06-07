@@ -43,27 +43,6 @@ Loading this module through a script tag will make it's exports available as `Ui
 <script src="https://unpkg.com/uint8arrays/dist/index.min.js"></script>
 ```
 
-- [Install](#install)
-- [API](#api)
-  - [alloc(size)](#allocsize)
-    - [Example](#example)
-  - [allocUnsafe(size)](#allocunsafesize)
-    - [Example](#example-1)
-  - [compare(a, b)](#comparea-b)
-    - [Example](#example-2)
-  - \[concat(arrays, \[length])]\(#concatarrays-length)
-    - [Example](#example-3)
-  - [equals(a, b)](#equalsa-b)
-    - [Example](#example-4)
-  - [fromString(string, encoding = 'utf8')](#fromstringstring-encoding--utf8)
-    - [Example](#example-5)
-  - [toString(array, encoding = 'utf8')](#tostringarray-encoding--utf8)
-    - [Example](#example-6)
-  - [xor(a, b)](#xora-b)
-    - [Example](#example-7)
-- [License](#license)
-- [Contribute](#contribute)
-
 ## API
 
 ### alloc(size)
