@@ -1,3 +1,10 @@
+## [4.0.7](https://github.com/achingbrain/uint8arrays/compare/v4.0.6...v4.0.7) (2023-11-24)
+
+
+### Documentation
+
+* fix quotes ([#64](https://github.com/achingbrain/uint8arrays/issues/64)) ([7782e9a](https://github.com/achingbrain/uint8arrays/commit/7782e9a14a2647e12ecdb55c3a96e7dc37a81f71))
+
 ## [4.0.6](https://github.com/achingbrain/uint8arrays/compare/v4.0.5...v4.0.6) (2023-08-03)
 
 
