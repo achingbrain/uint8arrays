@@ -52,7 +52,7 @@ Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in
 #### Example
 
 ```js
-import { alloc } from 'uint8arrays/alloc`
+import { alloc } from 'uint8arrays/alloc'
 
 const buf = alloc(100)
 ```
@@ -66,7 +66,7 @@ On platforms that support it, memory referenced by the returned `Uint8Array` wil
 #### Example
 
 ```js
-import { allocUnsafe } from 'uint8arrays/alloc`
+import { allocUnsafe } from 'uint8arrays/alloc'
 
 const buf = allocUnsafe(100)
 ```
