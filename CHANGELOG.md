@@ -1,3 +1,10 @@
+## [4.0.8](https://github.com/achingbrain/uint8arrays/compare/v4.0.7...v4.0.8) (2023-11-24)
+
+
+### Dependencies
+
+* **dev:** bump aegir from 40.0.13 to 41.1.9 ([#72](https://github.com/achingbrain/uint8arrays/issues/72)) ([2a9a0bf](https://github.com/achingbrain/uint8arrays/commit/2a9a0bfa097ccfc37f97bdd520f0729a1f7861b7))
+
 ## [4.0.7](https://github.com/achingbrain/uint8arrays/compare/v4.0.6...v4.0.7) (2023-11-24)
 
 
