@@ -1,0 +1,12 @@
+{
+  "entryPoints": [
+    "./src/index.ts",
+    "./src/alloc.ts",
+    "./src/compare.ts",
+    "./src/concat.ts",
+    "./src/equals.ts",
+    "./src/from-string.ts",
+    "./src/to-string.ts",
+    "./src/xor.ts"
+  ]
+}
