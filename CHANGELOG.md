@@ -1,3 +1,10 @@
+## [4.0.9](https://github.com/achingbrain/uint8arrays/compare/v4.0.8...v4.0.9) (2023-11-24)
+
+
+### Bug Fixes
+
+* use Buffer.concat on node as it is faster ([#73](https://github.com/achingbrain/uint8arrays/issues/73)) ([8d6c24b](https://github.com/achingbrain/uint8arrays/commit/8d6c24b5cf7162604bd1ddd08d97a5597322fb13))
+
 ## [4.0.8](https://github.com/achingbrain/uint8arrays/compare/v4.0.7...v4.0.8) (2023-11-24)
 
 
