@@ -58,7 +58,7 @@
  *
  * ## concat(arrays, \[length])
  *
- * Concatenate one or more array-likes and return a `Uint8Array` with their contents.
+ * Concatenate one or more `Uint8Array`s and return a `Uint8Array` with their contents.
  *
  * If you know the length of the arrays, pass it as a second parameter, otherwise it will be calculated by traversing the list of arrays.
  *
