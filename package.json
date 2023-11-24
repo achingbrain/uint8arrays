@@ -73,6 +73,7 @@
   "eslintConfig": {
     "extends": "ipfs",
     "parserOptions": {
+      "project": true,
       "sourceType": "module"
     }
   },
@@ -172,7 +173,8 @@
     "lint": "aegir lint",
     "release": "aegir release",
     "build": "aegir build",
-    "dep-check": "aegir dep-check"
+    "dep-check": "aegir dep-check",
+    "docs": "aegir docs"
   },
   "dependencies": {
     "multiformats": "^12.0.1"
