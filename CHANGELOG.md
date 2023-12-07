@@ -1,3 +1,15 @@
+## [4.0.10](https://github.com/achingbrain/uint8arrays/compare/v4.0.9...v4.0.10) (2023-12-07)
+
+
+### Bug Fixes
+
+* revert use of buffer.concat on node.js ([#75](https://github.com/achingbrain/uint8arrays/issues/75)) ([bf6d760](https://github.com/achingbrain/uint8arrays/commit/bf6d7603b88be240dff95da2694d06a2f6392186))
+
+
+### Trivial Changes
+
+* rename master to main ([3d5f87d](https://github.com/achingbrain/uint8arrays/commit/3d5f87dcef8abe0b7d85fb0eb7d1eedc989bb08d))
+
 ## [4.0.9](https://github.com/achingbrain/uint8arrays/compare/v4.0.8...v4.0.9) (2023-11-24)
 
 
