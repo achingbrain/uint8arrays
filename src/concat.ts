@@ -4,11 +4,7 @@ import { asUint8Array } from './util/as-uint8array.js'
 /**
  * Returns a new Uint8Array created by concatenating the passed ArrayLikes
  */
-export function concat (arrays: Uint8Array[], length?: number): Uint8Array {
-  if (globalThis.Buffer != null) {
-    return asUint8Array(globalThis.Buffer.concat(arrays, length))
-  }
-
+export function concat (arrays: Array<ArrayLike<number>>, length?: number): Uint8Array {
   if (length == null) {
     length = arrays.reduce((acc, curr) => acc + curr.length, 0)
   }
