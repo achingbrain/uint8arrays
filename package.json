@@ -12,6 +12,10 @@
   "bugs": {
     "url": "https://github.com/achingbrain/uint8arrays/issues"
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "type": "module",
   "types": "./dist/src/index.d.ts",
   "typesVersions": {
