@@ -1,3 +1,14 @@
+## [5.0.0](https://github.com/achingbrain/uint8arrays/compare/v4.0.10...v5.0.0) (2023-12-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* concat now expects an array of Uint8Arrays
+
+### Features
+
+* use buffer.concat in node ([#76](https://github.com/achingbrain/uint8arrays/issues/76)) ([ea51546](https://github.com/achingbrain/uint8arrays/commit/ea51546fe514993ee6e9ed13563f44008a5286ad)), closes [#73](https://github.com/achingbrain/uint8arrays/issues/73)
+
 ## [4.0.10](https://github.com/achingbrain/uint8arrays/compare/v4.0.9...v4.0.10) (2023-12-07)
 
 
