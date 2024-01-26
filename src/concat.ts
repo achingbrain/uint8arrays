@@ -4,22 +4,24 @@ import { asUint8Array } from './util/as-uint8array.js'
 /**
  * Returns a new Uint8Array created by concatenating the passed Uint8Arrays
  */
-export function concat (arrays: Uint8Array[], length?: number): Uint8Array {
-  if (globalThis.Buffer != null) {
-    return asUint8Array(globalThis.Buffer.concat(arrays, length))
-  }
+export const concat = (():((arrays: Uint8Array[], length?: number) => Uint8Array) => globalThis.Buffer != null
+  ? (arrays, length?) => asUint8Array(globalThis.Buffer.concat(arrays, length))
+  : (arrays, length?) => {
+      if (length == null) {
+        length = 0
+        for (const array of arrays) {
+          length += array.length
+        }
+      }
 
-  if (length == null) {
-    length = arrays.reduce((acc, curr) => acc + curr.length, 0)
-  }
+      const output = allocUnsafe(length)
+      let offset = 0
 
-  const output = allocUnsafe(length)
-  let offset = 0
+      for (const arr of arrays) {
+        output.set(arr, offset)
+        offset += arr.length
+      }
 
-  for (const arr of arrays) {
-    output.set(arr, offset)
-    offset += arr.length
-  }
-
-  return asUint8Array(output)
-}
+      return output
+    }
+)()
