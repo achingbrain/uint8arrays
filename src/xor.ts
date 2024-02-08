@@ -1,5 +1,4 @@
 import { allocUnsafe } from './alloc.js'
-import { asUint8Array } from './util/as-uint8array.js'
 
 /**
  * Returns the xor distance between two arrays
@@ -15,5 +14,5 @@ export function xor (a: Uint8Array, b: Uint8Array): Uint8Array {
     result[i] = a[i] ^ b[i]
   }
 
-  return asUint8Array(result)
+  return result
 }

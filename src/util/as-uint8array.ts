@@ -2,10 +2,9 @@
  * To guarantee Uint8Array semantics, convert nodejs Buffers
  * into vanilla Uint8Arrays
  */
-export function asUint8Array (buf: Uint8Array): Uint8Array {
+export const asUint8Array = (() => {
   if (globalThis.Buffer != null) {
-    return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength)
+    return (buf: Uint8Array | globalThis.Buffer): Uint8Array => buf.constructor !== Uint8Array ? new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength) : buf
   }
-
-  return buf
-}
+  return (buf: Uint8Array) => buf
+})()
