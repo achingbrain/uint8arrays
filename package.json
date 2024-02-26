@@ -47,14 +47,17 @@
     },
     "./alloc": {
       "types": "./dist/src/alloc.d.ts",
+      "node": "./dist/src/alloc.node.js",
       "import": "./dist/src/alloc.js"
     },
     "./compare": {
       "types": "./dist/src/compare.d.ts",
+      "node": "./dist/src/compare.node.js",
       "import": "./dist/src/compare.js"
     },
     "./concat": {
       "types": "./dist/src/concat.d.ts",
+      "node": "./dist/src/concat.node.js",
       "import": "./dist/src/concat.js"
     },
     "./equals": {
@@ -63,15 +66,49 @@
     },
     "./from-string": {
       "types": "./dist/src/from-string.d.ts",
+      "node": "./dist/src/from-string.node.js",
       "import": "./dist/src/from-string.js"
     },
     "./to-string": {
       "types": "./dist/src/to-string.d.ts",
+      "node": "./dist/src/to-string.node.js",
       "import": "./dist/src/to-string.js"
     },
     "./xor": {
       "types": "./dist/src/xor.d.ts",
       "import": "./dist/src/xor.js"
+    }
+  },
+  "imports": {
+    "#util/as-uint8array": {
+      "types": "./dist/src/util/as-uint8array.d.ts",
+      "node": "./dist/src/util/as-uint8array.node.js",
+      "import": "./dist/src/util/as-uint8array.js"
+    },
+    "#alloc": {
+      "types": "./dist/src/alloc.d.ts",
+      "node": "./dist/src/alloc.node.js",
+      "import": "./dist/src/alloc.js"
+    },
+    "#compare": {
+      "types": "./dist/src/compare.d.ts",
+      "node": "./dist/src/compare.node.js",
+      "import": "./dist/src/compare.js"
+    },
+    "#concat": {
+      "types": "./dist/src/concat.d.ts",
+      "node": "./dist/src/concat.node.js",
+      "import": "./dist/src/concat.js"
+    },
+    "#from-string": {
+      "types": "./dist/src/from-string.d.ts",
+      "node": "./dist/src/from-string.node.js",
+      "import": "./dist/src/from-string.js"
+    },
+    "#to-string": {
+      "types": "./dist/src/to-string.d.ts",
+      "node": "./dist/src/to-string.node.js",
+      "import": "./dist/src/to-string.js"
     }
   },
   "eslintConfig": {

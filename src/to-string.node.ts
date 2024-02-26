@@ -16,6 +16,9 @@ export function toString (array: Uint8Array, encoding: SupportedEncodings = 'utf
     throw new Error(`Unsupported encoding "${encoding}"`)
   }
 
+  if (encoding === 'utf8' || encoding === 'utf-8') {
+    return globalThis.Buffer.from(array.buffer, array.byteOffset, array.byteLength).toString('utf8')
+  }
 
   // strip multibase prefix
   return base.encoder.encode(array).substring(1)

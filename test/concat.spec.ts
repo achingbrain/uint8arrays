@@ -1,8 +1,8 @@
 /* eslint-env mocha */
 
 import { expect } from 'aegir/chai'
-import { alloc } from '../src/alloc.js'
-import { concat } from '../src/concat.js'
+import { alloc } from '#alloc'
+import { concat } from '#concat'
 
 describe('Uint8Array concat', () => {
   it('concats two Uint8Arrays', () => {
