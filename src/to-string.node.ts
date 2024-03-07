@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer'
 import bases, { type SupportedEncodings } from './util/bases.js'
 
 export type { SupportedEncodings }
@@ -17,7 +18,7 @@ export function toString (array: Uint8Array, encoding: SupportedEncodings = 'utf
   }
 
   if (encoding === 'utf8' || encoding === 'utf-8') {
-    return globalThis.Buffer.from(array.buffer, array.byteOffset, array.byteLength).toString('utf8')
+    return Buffer.from(array.buffer, array.byteOffset, array.byteLength).toString('utf8')
   }
 
   // strip multibase prefix
