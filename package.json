@@ -224,5 +224,13 @@
     "@types/benchmark": "^2.1.1",
     "aegir": "^42.2.3",
     "benchmark": "^2.1.4"
+  },
+  "react-native": {
+    "#util/as-uint8array": "./dist/src/util/as-uint8array.js",
+    "#alloc": "./dist/src/alloc.js",
+    "#compare": "./dist/src/compare.js",
+    "#concat": "./dist/src/concat.js",
+    "#from-string": "./dist/src/from-string.js",
+    "#to-string": "./dist/src/to-string.js"
   }
 }
