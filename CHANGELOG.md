@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/achingbrain/uint8arrays/compare/v5.0.2...v5.0.3) (2024-03-13)
+
+
+### Bug Fixes
+
+* Use subpath imports to choose Node or vanilla JS environment ([#88](https://github.com/achingbrain/uint8arrays/issues/88)) ([e43f1f4](https://github.com/achingbrain/uint8arrays/commit/e43f1f47bdf7719b33ebcc42472cbde66c6dcad6))
+
 ## [5.0.2](https://github.com/achingbrain/uint8arrays/compare/v5.0.1...v5.0.2) (2024-02-08)
 
 
