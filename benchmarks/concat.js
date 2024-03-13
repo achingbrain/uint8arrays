@@ -6,9 +6,9 @@ $ npx playwright-test benchmarks/concat.js --runner benchmark
 */
 
 import Benchmark from 'benchmark'
-import { allocUnsafe } from '../dist/src/alloc.js'
-import { concat } from '../dist/src/concat.js'
-import { fromString } from '../dist/src/from-string.js'
+import { allocUnsafe } from '#alloc'
+import { concat } from '#concat'
+import { fromString } from '#from-string'
 
 const string = 'Hello world, this is a Uint8Array created from a string'
 const DATA1 = fromString(string)

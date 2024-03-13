@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'aegir/chai'
-import { alloc, allocUnsafe } from '../src/alloc.js'
+import { alloc, allocUnsafe } from '#alloc'
 
 describe('Uint8Array alloc', () => {
   it('can alloc memory', () => {

@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'aegir/chai'
-import { toString } from '../src/to-string.js'
+import { toString } from '#to-string'
 
 describe('Uint8Array toString', () => {
   it('creates a String from a Uint8Array', () => {

@@ -5,6 +5,21 @@
 
 # About
 
+<!--
+
+!IMPORTANT!
+
+Everything in this README between "# About" and "# Install" is automatically
+generated and will be overwritten the next time the doc generator is run.
+
+To make changes to this section, please update the @packageDocumentation section
+of src/index.js or src/index.ts
+
+To experiment with formatting, please run "npm run docs" from the root of this
+repo and examine the changes made.
+
+-->
+
 `Uint8Array`s bring memory-efficient(ish) byte handling to browsers - they are similar to Node.js `Buffer`s but lack a lot of the utility methods present on that class.
 
 This module exports a number of function that let you do common operations - joining Uint8Arrays together, seeing if they have the same contents etc.
@@ -13,7 +28,7 @@ Since Node.js `Buffer`s are also `Uint8Array`s, it falls back to `Buffer` intern
 
 ## alloc(size)
 
-Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+Create a new `Uint8Array`. When running under Node.js, `Buffer` will be used in preference to `Uint8Array`.
 
 ### Example
 
@@ -25,7 +40,7 @@ const buf = alloc(100)
 
 ## allocUnsafe(size)
 
-Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+Create a new `Uint8Array`. When running under Node.js, `Buffer` will be used in preference to `Uint8Array`.
 
 On platforms that support it, memory referenced by the returned `Uint8Array` will not be initialized.
 

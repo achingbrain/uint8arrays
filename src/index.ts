@@ -9,7 +9,7 @@
  *
  * ## alloc(size)
  *
- * Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+ * Create a new `Uint8Array`. When running under Node.js, `Buffer` will be used in preference to `Uint8Array`.
  *
  * ### Example
  *
@@ -21,7 +21,7 @@
  *
  * ## allocUnsafe(size)
  *
- * Create a new `Uint8Array`. If `globalThis.Buffer` is defined, it will be used in preference to `globalThis.Uint8Array`.
+ * Create a new `Uint8Array`. When running under Node.js, `Buffer` will be used in preference to `Uint8Array`.
  *
  * On platforms that support it, memory referenced by the returned `Uint8Array` will not be initialized.
  *
@@ -143,12 +143,12 @@
  * ```
  */
 
-import { compare } from './compare.js'
-import { concat } from './concat.js'
 import { equals } from './equals.js'
-import { fromString } from './from-string.js'
-import { toString } from './to-string.js'
 import { xor } from './xor.js'
+import { compare } from '#compare'
+import { concat } from '#concat'
+import { fromString } from '#from-string'
+import { toString } from '#to-string'
 
 export {
   compare,

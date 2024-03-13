@@ -1,4 +1,6 @@
+import { Buffer } from 'node:buffer'
 import bases, { type SupportedEncodings } from './util/bases.js'
+import { asUint8Array } from '#util/as-uint8array'
 
 export type { SupportedEncodings }
 
@@ -14,6 +16,10 @@ export function fromString (string: string, encoding: SupportedEncodings = 'utf8
 
   if (base == null) {
     throw new Error(`Unsupported encoding "${encoding}"`)
+  }
+
+  if (encoding === 'utf8' || encoding === 'utf-8') {
+    return asUint8Array(Buffer.from(string, 'utf-8'))
   }
 
   // add multibase prefix

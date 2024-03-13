@@ -6,7 +6,7 @@ $ npx playwright-test benchmarks/alloc.js --runner benchmark
 */
 
 import Benchmark from 'benchmark'
-import { alloc, allocUnsafe } from '../src/dist/alloc.js'
+import { alloc, allocUnsafe } from '#alloc'
 
 const LENGTH = 1024
 
