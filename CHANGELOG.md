@@ -1,3 +1,15 @@
+## [5.1.0](https://github.com/achingbrain/uint8arrays/compare/v5.0.3...v5.1.0) (2024-05-10)
+
+
+### Features
+
+* add xor compare ([#89](https://github.com/achingbrain/uint8arrays/issues/89)) ([3313702](https://github.com/achingbrain/uint8arrays/commit/331370240abdcff58abac6433a1a5fad0198679c))
+
+
+### Trivial Changes
+
+* update ci config ([d59ba13](https://github.com/achingbrain/uint8arrays/commit/d59ba1312132267603b367a48c311f098d1bfad8))
+
 ## [5.0.3](https://github.com/achingbrain/uint8arrays/compare/v5.0.2...v5.0.3) (2024-03-13)
 
 
