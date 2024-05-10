@@ -161,6 +161,26 @@ import { xor } from 'uint8arrays/xor'
 console.info(xor(Uint8Array.from([1, 0]), Uint8Array.from([0, 1]))) // Uint8Array[1, 1]
 ```
 
+## xorCompare(a, b)
+
+Compares the distances between two xor `Uint8Array`s.
+
+### Example
+
+```ts
+import { xor } from 'uint8arrays/xor'
+import { xorCompare } from 'uint8arrays/xor-compare'
+
+const target = Uint8Array.from([1, 1])
+const val1 = Uint8Array.from([1, 0])
+const xor1 = xor(target, val1)
+
+const val2 = Uint8Array.from([0, 1])
+const xor2 = xor(target, val2)
+
+console.info(xorCompare(xor1, xor2)) // -1 or 0 or 1
+```
+
 # Install
 
 ```console

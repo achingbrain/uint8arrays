@@ -77,6 +77,10 @@
     "./xor": {
       "types": "./dist/src/xor.d.ts",
       "import": "./dist/src/xor.js"
+    },
+    "./xor-compare": {
+      "types": "./dist/src/xor-compare.d.ts",
+      "import": "./dist/src/xor-compare.js"
     }
   },
   "imports": {
