@@ -1,3 +1,5 @@
+# uint8arrays
+
 [![codecov](https://img.shields.io/codecov/c/github/achingbrain/uint8arrays.svg?style=flat-square)](https://codecov.io/gh/achingbrain/uint8arrays)
 [![CI](https://img.shields.io/github/actions/workflow/status/achingbrain/uint8arrays/js-test-and-release.yml?branch=main\&style=flat-square)](https://github.com/achingbrain/uint8arrays/actions/workflows/js-test-and-release.yml?query=branch%3Amain)
 
