@@ -1,3 +1,13 @@
+## [5.1.1](https://github.com/achingbrain/uint8arrays/compare/v5.1.0...v5.1.1) (2026-04-13)
+
+### Bug Fixes
+
+* support require ([#97](https://github.com/achingbrain/uint8arrays/issues/97)) ([385701f](https://github.com/achingbrain/uint8arrays/commit/385701fda6258ae3dbf7fc3719b61d4f5a7080e1))
+
+### Trivial Changes
+
+* create FUNDING.json ([26684d4](https://github.com/achingbrain/uint8arrays/commit/26684d4fa1a78f3e5c16e74bf13192e881db4fcf))
+
 ## [5.1.0](https://github.com/achingbrain/uint8arrays/compare/v5.0.3...v5.1.0) (2024-05-10)
 
 
