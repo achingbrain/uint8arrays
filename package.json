@@ -43,83 +43,53 @@
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
-      "import": "./dist/src/index.js"
+      "import": "./dist/src/index.js",
+      "module-sync": "./dist/src/index.js"
     },
     "./alloc": {
       "types": "./dist/src/alloc.d.ts",
       "node": "./dist/src/alloc.node.js",
-      "import": "./dist/src/alloc.js"
+      "import": "./dist/src/alloc.js",
+      "module-sync": "./dist/src/alloc.js"
     },
     "./compare": {
       "types": "./dist/src/compare.d.ts",
       "node": "./dist/src/compare.node.js",
-      "import": "./dist/src/compare.js"
+      "import": "./dist/src/compare.js",
+      "module-sync": "./dist/src/compare.js"
     },
     "./concat": {
       "types": "./dist/src/concat.d.ts",
       "node": "./dist/src/concat.node.js",
-      "import": "./dist/src/concat.js"
+      "import": "./dist/src/concat.js",
+      "module-sync": "./dist/src/concat.js"
     },
     "./equals": {
       "types": "./dist/src/equals.d.ts",
-      "import": "./dist/src/equals.js"
+      "import": "./dist/src/equals.js",
+      "module-sync": "./dist/src/equals.js"
     },
     "./from-string": {
       "types": "./dist/src/from-string.d.ts",
       "node": "./dist/src/from-string.node.js",
-      "import": "./dist/src/from-string.js"
+      "import": "./dist/src/from-string.js",
+      "module-sync": "./dist/src/from-string.js"
     },
     "./to-string": {
       "types": "./dist/src/to-string.d.ts",
       "node": "./dist/src/to-string.node.js",
-      "import": "./dist/src/to-string.js"
+      "import": "./dist/src/to-string.js",
+      "module-sync": "./dist/src/to-string.js"
     },
     "./xor": {
       "types": "./dist/src/xor.d.ts",
-      "import": "./dist/src/xor.js"
+      "import": "./dist/src/xor.js",
+      "module-sync": "./dist/src/xor.js"
     },
     "./xor-compare": {
       "types": "./dist/src/xor-compare.d.ts",
-      "import": "./dist/src/xor-compare.js"
-    }
-  },
-  "imports": {
-    "#util/as-uint8array": {
-      "types": "./dist/src/util/as-uint8array.d.ts",
-      "node": "./dist/src/util/as-uint8array.node.js",
-      "import": "./dist/src/util/as-uint8array.js"
-    },
-    "#alloc": {
-      "types": "./dist/src/alloc.d.ts",
-      "node": "./dist/src/alloc.node.js",
-      "import": "./dist/src/alloc.js"
-    },
-    "#compare": {
-      "types": "./dist/src/compare.d.ts",
-      "node": "./dist/src/compare.node.js",
-      "import": "./dist/src/compare.js"
-    },
-    "#concat": {
-      "types": "./dist/src/concat.d.ts",
-      "node": "./dist/src/concat.node.js",
-      "import": "./dist/src/concat.js"
-    },
-    "#from-string": {
-      "types": "./dist/src/from-string.d.ts",
-      "node": "./dist/src/from-string.node.js",
-      "import": "./dist/src/from-string.js"
-    },
-    "#to-string": {
-      "types": "./dist/src/to-string.d.ts",
-      "node": "./dist/src/to-string.node.js",
-      "import": "./dist/src/to-string.js"
-    }
-  },
-  "eslintConfig": {
-    "extends": "ipfs",
-    "parserOptions": {
-      "project": true,
-      "sourceType": "module"
+      "import": "./dist/src/xor-compare.js",
+      "module-sync": "./dist/src/xor-compare.js"
     }
   },
   "release": {
@@ -204,7 +174,15 @@
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/github",
-      "@semantic-release/git"
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ]
     ]
   },
   "scripts": {
@@ -226,8 +204,40 @@
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
-    "aegir": "^42.2.3",
+    "aegir": "^47.1.5",
     "benchmark": "^2.1.4"
+  },
+  "imports": {
+    "#util/as-uint8array": {
+      "types": "./dist/src/util/as-uint8array.d.ts",
+      "node": "./dist/src/util/as-uint8array.node.js",
+      "import": "./dist/src/util/as-uint8array.js"
+    },
+    "#alloc": {
+      "types": "./dist/src/alloc.d.ts",
+      "node": "./dist/src/alloc.node.js",
+      "import": "./dist/src/alloc.js"
+    },
+    "#compare": {
+      "types": "./dist/src/compare.d.ts",
+      "node": "./dist/src/compare.node.js",
+      "import": "./dist/src/compare.js"
+    },
+    "#concat": {
+      "types": "./dist/src/concat.d.ts",
+      "node": "./dist/src/concat.node.js",
+      "import": "./dist/src/concat.js"
+    },
+    "#from-string": {
+      "types": "./dist/src/from-string.d.ts",
+      "node": "./dist/src/from-string.node.js",
+      "import": "./dist/src/from-string.js"
+    },
+    "#to-string": {
+      "types": "./dist/src/to-string.d.ts",
+      "node": "./dist/src/to-string.node.js",
+      "import": "./dist/src/to-string.js"
+    }
   },
   "react-native": {
     "#util/as-uint8array": "./dist/src/util/as-uint8array.js",
