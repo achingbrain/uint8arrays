@@ -1,5 +1,6 @@
 import { Buffer } from 'node:buffer'
-import bases, { type SupportedEncodings } from './util/bases.js'
+import bases from './util/bases.ts'
+import type { SupportedEncodings } from './util/bases.ts'
 
 export type { SupportedEncodings }
 

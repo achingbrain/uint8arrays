@@ -163,8 +163,8 @@
  * ```
  */
 
-import { equals } from './equals.js'
-import { xor } from './xor.js'
+import { equals } from './equals.ts'
+import { xor } from './xor.ts'
 import { compare } from '#compare'
 import { concat } from '#concat'
 import { fromString } from '#from-string'
@@ -179,4 +179,4 @@ export {
   xor
 }
 
-export type { SupportedEncodings } from './util/bases.js'
+export type { SupportedEncodings } from './util/bases.ts'

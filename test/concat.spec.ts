@@ -1,5 +1,3 @@
-/* eslint-env mocha */
-
 import { expect } from 'aegir/chai'
 import { alloc } from '#alloc'
 import { concat } from '#concat'

@@ -1,4 +1,5 @@
-import bases, { type SupportedEncodings } from './util/bases.js'
+import bases from './util/bases.ts'
+import type { SupportedEncodings } from './util/bases.ts'
 
 export type { SupportedEncodings }
 
@@ -17,5 +18,5 @@ export function fromString (string: string, encoding: SupportedEncodings = 'utf8
   }
 
   // add multibase prefix
-  return base.decoder.decode(`${base.prefix}${string}`) // eslint-disable-line @typescript-eslint/restrict-template-expressions
+  return base.decoder.decode(`${base.prefix}${string}`)
 }
