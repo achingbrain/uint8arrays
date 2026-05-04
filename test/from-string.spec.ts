@@ -1,5 +1,5 @@
 import { expect } from 'aegir/chai'
-import bases from '../src/util/bases.js'
+import bases from '../src/util/bases.ts'
 import type { SupportedEncodings } from '#from-string'
 import { fromString } from '#from-string'
 import { toString } from '#to-string'

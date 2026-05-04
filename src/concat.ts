@@ -4,7 +4,7 @@ import { asUint8Array } from '#util/as-uint8array'
 /**
  * Returns a new Uint8Array created by concatenating the passed Uint8Arrays
  */
-export function concat (arrays: Uint8Array[], length?: number): Uint8Array {
+export function concat (arrays: Uint8Array[], length?: number): Uint8Array<ArrayBuffer> {
   if (length == null) {
     length = arrays.reduce((acc, curr) => acc + curr.length, 0)
   }
