@@ -204,7 +204,7 @@
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
-    "aegir": "^47.1.5",
+    "aegir": "^48.0.1",
     "benchmark": "^2.1.4"
   },
   "imports": {
