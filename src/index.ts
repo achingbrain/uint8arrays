@@ -187,19 +187,26 @@
  */
 
 import { equals } from './equals.ts'
+import { withArrayBuffer } from './with-array-buffer.ts'
+import { xorCompare } from './xor-compare.ts'
 import { xor } from './xor.ts'
+import { alloc, allocUnsafe } from '#alloc'
 import { compare } from '#compare'
 import { concat } from '#concat'
 import { fromString } from '#from-string'
 import { toString } from '#to-string'
 
 export {
+  alloc,
+  allocUnsafe,
   compare,
   concat,
   equals,
   fromString,
   toString,
-  xor
+  withArrayBuffer,
+  xor,
+  xorCompare
 }
 
 export type { SupportedEncodings } from './util/bases.ts'
