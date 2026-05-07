@@ -12,7 +12,7 @@ export type { SupportedEncodings }
  *
  * Also `ascii` which is similar to node's 'binary' encoding.
  */
-export function fromString (string: string, encoding: SupportedEncodings = 'utf8'): Uint8Array {
+export function fromString (string: string, encoding: SupportedEncodings = 'utf8'): Uint8Array<ArrayBuffer> {
   const base = bases[encoding]
 
   if (base == null) {

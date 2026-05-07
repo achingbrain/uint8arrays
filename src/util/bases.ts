@@ -2,7 +2,7 @@ import { bases } from 'multiformats/basics'
 import type { MultibaseCodec } from 'multiformats'
 import { allocUnsafe } from '#alloc'
 
-function createCodec (name: string, prefix: string, encode: (buf: Uint8Array) => string, decode: (str: string) => Uint8Array): MultibaseCodec<any> {
+function createCodec (name: string, prefix: string, encode: (buf: Uint8Array) => string, decode: (str: string) => Uint8Array<ArrayBuffer>): MultibaseCodec<any> {
   return {
     name,
     prefix,

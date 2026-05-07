@@ -1,5 +1,5 @@
 import { expect } from 'aegir/chai'
-import { xorCompare } from '../src/xor-compare.js'
+import { xorCompare } from '../src/xor-compare.ts'
 
 describe('xor-compare', () => {
   it('compare', () => {
