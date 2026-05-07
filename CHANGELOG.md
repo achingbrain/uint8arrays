@@ -1,3 +1,13 @@
+## [6.0.0](https://github.com/achingbrain/uint8arrays/compare/v5.1.1...v6.0.0) (2026-05-07)
+
+### ⚠ BREAKING CHANGES
+
+* where `Uint8Array` was returned, now `Uint8Array<ArrayBuffer>`is returned instead
+
+### Bug Fixes
+
+* return ArrayBuffer-backed arrays ([#98](https://github.com/achingbrain/uint8arrays/issues/98)) ([f345af0](https://github.com/achingbrain/uint8arrays/commit/f345af03143077319b99f8b7e811931a0335e3ab))
+
 ## [5.1.1](https://github.com/achingbrain/uint8arrays/compare/v5.1.0...v5.1.1) (2026-04-13)
 
 ### Bug Fixes
