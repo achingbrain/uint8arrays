@@ -1,3 +1,9 @@
+## [6.1.0](https://github.com/achingbrain/uint8arrays/compare/v6.0.0...v6.1.0) (2026-05-07)
+
+### Features
+
+* add withArrayBuffer ([#100](https://github.com/achingbrain/uint8arrays/issues/100)) ([54d8f09](https://github.com/achingbrain/uint8arrays/commit/54d8f09d46085b0de187cda4ea0d4f4a248f7037))
+
 ## [6.0.0](https://github.com/achingbrain/uint8arrays/compare/v5.1.1...v6.0.0) (2026-05-07)
 
 ### ⚠ BREAKING CHANGES
