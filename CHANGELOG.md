@@ -1,3 +1,9 @@
+## [6.1.1](https://github.com/achingbrain/uint8arrays/compare/v6.1.0...v6.1.1) (2026-05-07)
+
+### Bug Fixes
+
+* add missing exports ([#101](https://github.com/achingbrain/uint8arrays/issues/101)) ([c7ae7d0](https://github.com/achingbrain/uint8arrays/commit/c7ae7d08f85a9bf8b24c7f0286a03d368573f868))
+
 ## [6.1.0](https://github.com/achingbrain/uint8arrays/compare/v6.0.0...v6.1.0) (2026-05-07)
 
 ### Features
