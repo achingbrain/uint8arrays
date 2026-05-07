@@ -200,7 +200,7 @@
     "docs": "aegir docs"
   },
   "dependencies": {
-    "multiformats": "^13.0.0"
+    "multiformats": "^14.0.0"
   },
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
