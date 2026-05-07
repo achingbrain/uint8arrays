@@ -81,6 +81,11 @@
       "import": "./dist/src/to-string.js",
       "module-sync": "./dist/src/to-string.js"
     },
+    "./with-array-buffer": {
+      "types": "./dist/src/with-array-buffer.d.ts",
+      "import": "./dist/src/with-array-buffer.js",
+      "module-sync": "./dist/src/with-array-buffer.js"
+    },
     "./xor": {
       "types": "./dist/src/xor.d.ts",
       "import": "./dist/src/xor.js",

@@ -11,9 +11,9 @@
  *
  * Create a new `Uint8Array`. When running under Node.js, `Buffer` will be used in preference to `Uint8Array`.
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { alloc } from 'uint8arrays/alloc'
  *
  * const buf = alloc(100)
@@ -25,9 +25,9 @@
  *
  * On platforms that support it, memory referenced by the returned `Uint8Array` will not be initialized.
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { allocUnsafe } from 'uint8arrays/alloc'
  *
  * const buf = allocUnsafe(100)
@@ -37,9 +37,9 @@
  *
  * Compare two `Uint8Arrays`
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { compare } from 'uint8arrays/compare'
  *
  * const arrays = [
@@ -62,9 +62,9 @@
  *
  * If you know the length of the arrays, pass it as a second parameter, otherwise it will be calculated by traversing the list of arrays.
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { concat } from 'uint8arrays/concat'
  *
  * const arrays = [
@@ -82,9 +82,9 @@
  *
  * Returns true if the two arrays are the same array or if they have the same length and contents.
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { equals } from 'uint8arrays/equals'
  *
  * const a = Uint8Array.from([0, 1, 2])
@@ -102,9 +102,9 @@
  *
  * Supports `utf8` and any of the [multibase encodings](https://github.com/multiformats/multibase/blob/master/multibase.csv) as implemented by the [multiformats module](https://www.npmjs.com/package/multiformats).
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { fromString } from 'uint8arrays/from-string'
  *
  * console.info(fromString('hello world')) // Uint8Array[104, 101 ...
@@ -119,9 +119,9 @@
  *
  * Supports `utf8` and any of the [multibase encodings](https://github.com/multiformats/multibase/blob/master/multibase.csv) as implemented by the [multiformats module](https://www.npmjs.com/package/multiformats).
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { toString } from 'uint8arrays/to-string'
  *
  * console.info(toString(Uint8Array.from([104, 101...]))) // 'hello world'
@@ -130,13 +130,36 @@
  * console.info(toString(Uint8Array.from([48, 49, 50...]), 'ascii')) // '01234'
  * ```
  *
+ * ## withArrayBuffer(buf)
+ *
+ * `Uint8Array`s can be backed by an `ArrayBuffer` or a `SharedArrayBuffer`.
+ *
+ * The types of these two values have diverged in `typescript@5.7` or later.
+ *
+ * Some APIs require `Uint8Array`s backed by `ArrayBuffer`s specifically so call
+ * `withArrayBuffer` to ensure your `Uint8Array`s are backed the correct type.
+ *
+ * @example
+ *
+ * ```ts
+ * import { withArrayBuffer } from 'uint8arrays/with-array-buffer'
+ *
+ * const buf = new SharedArrayBuffer(10)
+ * const arr = new Uint8Array(buf, 0, buf.byteLength)
+ *
+ * const arr2 = withArrayBuffer(arr)
+ *
+ * console.info(arr.buffer.constructor) // [Function: SharedArrayBuffer]
+ * console.info(arr2.buffer.constructor) // [Function: ArrayBuffer]
+ * ```
+ *
  * ## xor(a, b)
  *
  * Returns a `Uint8Array` containing `a` and `b` xored together.
  *
- * ### Example
+ * @example
  *
- * ```js
+ * ```ts
  * import { xor } from 'uint8arrays/xor'
  *
  * console.info(xor(Uint8Array.from([1, 0]), Uint8Array.from([0, 1]))) // Uint8Array[1, 1]
@@ -146,7 +169,7 @@
  *
  * Compares the distances between two xor `Uint8Array`s.
  *
- * ### Example
+ * @example
  *
  * ```ts
  * import { xor } from 'uint8arrays/xor'
